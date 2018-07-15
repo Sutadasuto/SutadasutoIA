@@ -1,0 +1,167 @@
+Bisharp
+Ability: Defiant
+Adamant Nature
+- Night Slash
+- Iron Head
+- Poison Jab
+- Brick Break
+
+Dragonite
+Ability: Multiscale
+Adamant Nature
+- Dragon Claw
+- Fire Punch
+- Earthquake
+- Thunder Punch
+
+Excadrill
+Ability: Sand Rush
+Jolly Nature
+- Earthquake
+- Iron Head
+- Rock Slide
+- Poison Jab
+
+Ferrothorn
+Ability: Iron Barbs
+Careful Nature
+- Iron Head
+- Bulldoze
+- Power Whip
+- Poison Jab
+
+Garchomp
+Ability: Rough Skin
+Jolly Nature  
+- Stone Edge
+- Earthquake
+- Dragon Claw
+- Poison Jab
+
+Gengar
+Ability: Cursed Body
+Timid Nature  
+IVs: 0 Atk  
+- Shadow Ball
+- Sludge Bomb
+- Dazzling Gleam
+- Psychic
+
+Greninja
+Ability: Torrent
+Naive Nature
+IVs: 0 Atk
+- Ice Beam
+- Extrasensory
+- Dark Pulse
+- Surf
+
+Hawlucha
+Ability: Mold Breaker
+Adamant Nature
+- Acrobatics
+- Flying Press
+- High Jump Kick
+- Iron Head
+
+Magnezone
+Ability: Magnet Pull
+Modest Nature
+IVs: 0 Atk  
+- Signal Beam
+- Thunderbolt
+- Flash Cannon
+- Tri Attack
+
+Skarmory
+Ability: Sturdy
+Impish Nature
+- Brave Bird
+- Rock Slide
+- Iron Head
+- Night Slash
+
+Tyranitar
+Ability: Unnerve
+Adamant Nature
+- Stone Edge
+- Crunch
+- Fire Punch
+- Earthquake
+
+Volcarona
+Ability: Flame Body
+Timid Nature
+IVs: 0 Atk  
+- Giga Drain
+- Fire Blast
+- Bug Buzz
+- Psychic
+
+Alakazam
+Ability: Magic Guard
+Timid Nature
+IVs: 0 Atk  
+- Psychic
+- Focus Blast
+- Shadow Ball
+- Dazzling Gleam
+
+Breloom
+Ability: Technician
+Adamant Nature
+- Iron Tail
+- Bullet Seed
+- Mach Punch
+- Rock Tomb
+
+Gyarados
+Ability: Intimidate
+Jolly Nature
+- Ice Fang
+- Waterfall
+- Crunch
+- Earthquake
+
+Porygon-Z
+Ability: Adaptability
+Modest Nature
+IVs: 0 Atk
+- Thunderbolt
+- Ice Beam
+- Tri Attack
+- Psychic
+
+Salamence
+Ability: Intimidate
+Adamant Nature
+- Dragon Claw
+- Earthquake
+- Fire Fang
+- Iron Tail
+
+Staraptor
+Ability: Reckless
+Jolly Nature
+- Brave Bird
+- Double-Edge
+- Close Combat
+- Pursuit
+
+Weavile
+Ability: Pressure
+Adamant Nature
+- Icicle Crash
+- Throat Chop
+- Brick Break
+- Poison Jab
+
+Gardevoir
+Ability: Trace
+Modest Nature
+IVs: 0 Atk  
+- Psychic
+- Moonblast
+- Shadow Ball
+- Energy Ball
+

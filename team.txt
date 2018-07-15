@@ -1,0 +1,60 @@
+Greninja (M) @ Darkinium Z  
+Ability: Protean  
+EVs: 252 SpA / 252 Spe  
+Modest Nature  
+- Surf  
+- Dark Pulse  
+- Ice Beam  
+- Water Shuriken  
+
+Hawlucha (M) @ Misty Seed  
+Ability: Unburden  
+Shiny: Yes  
+EVs: 252 Atk / 4 Def / 252 SpD  
+Adamant Nature  
+- Drain Punch  
+- Acrobatics  
+- Substitute  
+- Bulk Up  
+
+Tapu Fini @ Leftovers  
+Ability: Misty Surge  
+EVs: 252 HP / 252 Def / 4 Spe  
+Calm Nature  
+IVs: 0 Atk  
+- Muddy Water  
+- Moonblast  
+- Nature's Madness  
+- Defog  
+
+Gliscor (M) @ Toxic Orb  
+Ability: Poison Heal  
+Shiny: Yes  
+EVs: 252 HP / 4 Atk / 252 Def  
+Impish Nature  
+- Stealth Rock  
+- Earthquake  
+- Knock Off  
+- Substitute  
+
+Sylveon (F) @ Aguav Berry  
+Ability: Pixilate  
+EVs: 252 HP / 4 SpA / 252 SpD  
+Calm Nature  
+IVs: 0 Atk  
+- Hyper Voice  
+- Wish  
+- Substitute  
+- Protect  
+
+Manectric (M) @ Manectite  
+Ability: Lightning Rod  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Thunderbolt  
+- Flamethrower  
+- Hidden Power [Ice]  
+- Volt Switch  
+
+

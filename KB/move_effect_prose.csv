@@ -1,0 +1,1123 @@
+move+AF8-effect+AF8-id,short+AF8-effect,effect
+1,Inflicts regular damage with no additional effect.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.
+2,Puts the target to sleep.,Puts the target to +AFs-sleep+AF0Aew-mechanic:sleep+AH0-.
+3,Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-poison+AF0Aew-mechanic:poison+AH0- the target.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-poison+AF0Aew-mechanic:poison+AH0- the target.
+4,Drains half the damage inflicted to heal the user.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  +AFs-Drains+AF0Aew-mechanic:drain+AH0- half the damage inflicted to heal the user.
+5,Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-burn+AF0Aew-mechanic:burn+AH0- the target.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-burn+AF0Aew-mechanic:burn+AH0- the target.
+6,Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-freeze+AF0Aew-mechanic:freeze+AH0- the target.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-freeze+AF0Aew-mechanic:freeze+AH0- the target.
+7,Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-paralyze+AF0Aew-mechanic:paralysis+AH0- the target.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-paralyze+AF0Aew-mechanic:paralyze+AH0- the target.
+8,User faints.,+ACI-User +AFs-faint+AF0Aew-mechanic:faint+AH0-s, even if the attack +AFs-fail+AF0Aew-mechanic:fail+AH0-s or +AFs-miss+AF0Aew-mechanic:miss+AH0-es.  Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.+ACI-
+9,Only works on sleeping Pokemon.  Drains half the damage inflicted to heal the user.,+AFs-Fails+AF0Aew-mechanic:fail+AH0- if not used on a +AFs-sleep+AF0Aew-mechanic:sleep+AH0-ing Pok+//0Aw//9AKk-mon.  Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  +AFs-Drains+AF0Aew-mechanic:drain+AH0- half the damage inflicted to heal the user.
+10,Uses the target's last used move.,+ACI-Uses the last move targeted at the user by a Pok+//0Aw//9AKk-mon still on the +AFs-field+AF0Aew-mechanic:field+AH0-.  A move counts as targeting the user even if it hit multiple Pok+//0Aw//9AKk-mon, as long as the user was one of them+ADs- however, moves targeting the +AFs-field+AF0Aew-mechanic:field+AH0- itself do not count.  If the user has not been targeted by an appropriate move since entering the +AFs-field+AF0Aew-mechanic:field+AH0-, or if no Pok+//0Aw//9AKk-mon that targeted the user remains on the +AFs-field+AF0Aew-mechanic:field+AH0-, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+Moves that +AFs-fail+AF0Aew-mechanic:fail+AH0-ed, +AFs-miss+AF0Aew-mechanic:miss+AH0-ed, had +AFs-no effect+AF0Aew-mechanic:no+AC0-effect+AH0-, or were +AFs-block+AF0Aew-mechanic:block+AH0-ed are still copied.
+
+Assist moves, time+AC0-delayed moves, +//0A4v/9AID//QCc-meta+//0A4v/9AID//QCd- moves that operate on other moves/Pok+//0Aw//9AKk-mon/abilities, and some other special moves cannot be copied and are ignored+ADs- if the last move to hit the user was such a move, the previous move will be used instead.  The full list of ignored moves is: +AFsAXQB7-move:acid+AC0-armor+AH0-, +AFsAXQB7-move:acupressure+AH0-, +AFsAXQB7-move:after+AC0-you+AH0-, +AFsAXQB7-move:agility+AH0-, +AFsAXQB7-move:ally+AC0-switch+AH0-, +AFsAXQB7-move:amnesia+AH0-, +AFsAXQB7-move:aqua+AC0-ring+AH0-, +AFsAXQB7-move:aromatherapy+AH0-, +AFsAXQB7-move:aromatic+AC0-mist+AH0-, +AFsAXQB7-move:assist+AH0-, +AFsAXQB7-move:autotomize+AH0-, +AFsAXQB7-move:barrier+AH0-, +AFsAXQB7-move:baton+AC0-pass+AH0-, +AFsAXQB7-move:belch+AH0-, +AFsAXQB7-move:belly+AC0-drum+AH0-, +AFsAXQB7-move:bide+AH0-, +AFsAXQB7-move:bulk+AC0-up+AH0-, +AFsAXQB7-move:calm+AC0-mind+AH0-, +AFsAXQB7-move:camouflage+AH0-, +AFsAXQB7-move:celebrate+AH0-, +AFsAXQB7-move:charge+AH0-, +AFsAXQB7-move:coil+AH0-, +AFsAXQB7-move:conversion+AH0-, +AFsAXQB7-move:conversion+AC0-2+AH0-, +AFsAXQB7-move:copycat+AH0-, +AFsAXQB7-move:cosmic+AC0-power+AH0-, +AFsAXQB7-move:cotton+AC0-guard+AH0-, +AFsAXQB7-move:counter+AH0-, +AFsAXQB7-move:crafty+AC0-shield+AH0-, +AFsAXQB7-move:curse+AH0-, +AFsAXQB7-move:defend+AC0-order+AH0-, +AFsAXQB7-move:defense+AC0-curl+AH0-, +AFsAXQB7-move:destiny+AC0-bond+AH0-, +AFsAXQB7-move:detect+AH0-, +AFsAXQB7-move:doom+AC0-desire+AH0-, +AFsAXQB7-move:double+AC0-team+AH0-, +AFsAXQB7-move:dragon+AC0-dance+AH0-, +AFsAXQB7-move:electric+AC0-terrain+AH0-, +AFsAXQB7-move:endure+AH0-, +AFsAXQB7-move:final+AC0-gambit+AH0-, +AFsAXQB7-move:flower+AC0-shield+AH0-, +AFsAXQB7-move:focus+AC0-energy+AH0-, +AFsAXQB7-move:focus+AC0-punch+AH0-, +AFsAXQB7-move:follow+AC0-me+AH0-, +AFsAXQB7-move:future+AC0-sight+AH0-, +AFsAXQB7-move:geomancy+AH0-, +AFsAXQB7-move:grassy+AC0-terrain+AH0-, +AFsAXQB7-move:gravity+AH0-, +AFsAXQB7-move:growth+AH0-, +AFsAXQB7-move:grudge+AH0-, +AFsAXQB7-move:guard+AC0-split+AH0-, +AFsAXQB7-move:hail+AH0-, +AFsAXQB7-move:happy+AC0-hour+AH0-, +AFsAXQB7-move:harden+AH0-, +AFsAXQB7-move:haze+AH0-, +AFsAXQB7-move:heal+AC0-bell+AH0-, +AFsAXQB7-move:heal+AC0-order+AH0-, +AFsAXQB7-move:heal+AC0-pulse+AH0-, +AFsAXQB7-move:healing+AC0-wish+AH0-, +AFsAXQB7-move:helping+AC0-hand+AH0-, +AFsAXQB7-move:hold+AC0-hands+AH0-, +AFsAXQB7-move:hone+AC0-claws+AH0-, +AFsAXQB7-move:howl+AH0-, +AFsAXQB7-move:imprison+AH0-, +AFsAXQB7-move:ingrain+AH0-, +AFsAXQB7-move:ion+AC0-deluge+AH0-, +AFsAXQB7-move:iron+AC0-defense+AH0-, +AFsAXQB7-move:kings+AC0-shield+AH0-, +AFsAXQB7-move:light+AC0-screen+AH0-, +AFsAXQB7-move:lucky+AC0-chant+AH0-, +AFsAXQB7-move:lunar+AC0-dance+AH0-, +AFsAXQB7-move:magic+AC0-coat+AH0-, +AFsAXQB7-move:magnet+AC0-rise+AH0-, +AFsAXQB7-move:magnetic+AC0-flux+AH0-, +AFsAXQB7-move:mat+AC0-block+AH0-, +AFsAXQB7-move:me+AC0-first+AH0-, +AFsAXQB7-move:meditate+AH0-, +AFsAXQB7-move:metronome+AH0-, +AFsAXQB7-move:milk+AC0-drink+AH0-, +AFsAXQB7-move:mimic+AH0-, +AFsAXQB7-move:minimize+AH0-, +AFsAXQB7-move:mirror+AC0-coat+AH0-, +AFsAXQB7-move:mirror+AC0-move+AH0-, +AFsAXQB7-move:mist+AH0-, +AFsAXQB7-move:misty+AC0-terrain+AH0-, +AFsAXQB7-move:moonlight+AH0-, +AFsAXQB7-move:morning+AC0-sun+AH0-, +AFsAXQB7-move:mud+AC0-sport+AH0-, +AFsAXQB7-move:nasty+AC0-plot+AH0-, +AFsAXQB7-move:nature+AC0-power+AH0-, +AFsAXQB7-move:perish+AC0-song+AH0-, +AFsAXQB7-move:power+AC0-split+AH0-, +AFsAXQB7-move:power+AC0-trick+AH0-, +AFsAXQB7-move:protect+AH0-, +AFsAXQB7-move:psych+AC0-up+AH0-, +AFsAXQB7-move:quick+AC0-guard+AH0-, +AFsAXQB7-move:quiver+AC0-dance+AH0-, +AFsAXQB7-move:rage+AC0-powder+AH0-, +AFsAXQB7-move:rain+AC0-dance+AH0-, +AFsAXQB7-move:recover+AH0-, +AFsAXQB7-move:recycle+AH0-, +AFsAXQB7-move:reflect+AH0-, +AFsAXQB7-move:reflect+AC0-type+AH0-, +AFsAXQB7-move:refresh+AH0-, +AFsAXQB7-move:rest+AH0-, +AFsAXQB7-move:rock+AC0-polish+AH0-, +AFsAXQB7-move:role+AC0-play+AH0-, +AFsAXQB7-move:roost+AH0-, +AFsAXQB7-move:rototiller+AH0-, +AFsAXQB7-move:safeguard+AH0-, +AFsAXQB7-move:sandstorm+AH0-, +AFsAXQB7-move:shadow+AC0-blast+AH0-, +AFsAXQB7-move:shadow+AC0-bolt+AH0-, +AFsAXQB7-move:shadow+AC0-half+AH0-, +AFsAXQB7-move:shadow+AC0-rush+AH0-, +AFsAXQB7-move:shadow+AC0-shed+AH0-, +AFsAXQB7-move:shadow+AC0-sky+AH0-, +AFsAXQB7-move:shadow+AC0-storm+AH0-, +AFsAXQB7-move:shadow+AC0-wave+AH0-, +AFsAXQB7-move:sharpen+AH0-, +AFsAXQB7-move:shell+AC0-smash+AH0-, +AFsAXQB7-move:shift+AC0-gear+AH0-, +AFsAXQB7-move:sketch+AH0-, +AFsAXQB7-move:slack+AC0-off+AH0-, +AFsAXQB7-move:sleep+AC0-talk+AH0-, +AFsAXQB7-move:snatch+AH0-, +AFsAXQB7-move:soft+AC0-boiled+AH0-, +AFsAXQB7-move:spikes+AH0-, +AFsAXQB7-move:spiky+AC0-shield+AH0-, +AFsAXQB7-move:spit+AC0-up+AH0-, +AFsAXQB7-move:splash+AH0-, +AFsAXQB7-move:stealth+AC0-rock+AH0-, +AFsAXQB7-move:sticky+AC0-web+AH0-, +AFsAXQB7-move:stockpile+AH0-, +AFsAXQB7-move:struggle+AH0-, +AFsAXQB7-move:substitute+AH0-, +AFsAXQB7-move:sunny+AC0-day+AH0-, +AFsAXQB7-move:swallow+AH0-, +AFsAXQB7-move:swords+AC0-dance+AH0-, +AFsAXQB7-move:synthesis+AH0-, +AFsAXQB7-move:tail+AC0-glow+AH0-, +AFsAXQB7-move:tailwind+AH0-, +AFsAXQB7-move:teleport+AH0-, +AFsAXQB7-move:toxic+AC0-spikes+AH0-, +AFsAXQB7-move:transform+AH0-, +AFsAXQB7-move:water+AC0-sport+AH0-, +AFsAXQB7-move:wide+AC0-guard+AH0-, +AFsAXQB7-move:wish+AH0-, +AFsAXQB7-move:withdraw+AH0- and +AFsAXQB7-move:work+AC0-up+AH0-.
+
+This move cannot be selected by +AFsAXQB7-move:assist+AH0-, +AFsAXQB7-move:metronome+AH0-, or +AFsAXQB7-move:sleep+AC0-talk+AH0-, nor forced by +AFsAXQB7-move:encore+AH0-.+ACI-
+11,Raises the user's Attack by one stage.,Raises the user's +AFs-Attack+AF0Aew-mechanic:attack+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+12,Raises the user's Defense by one stage.,Raises the user's +AFs-Defense+AF0Aew-mechanic:defense+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+14,Raises the user's Special Attack by one stage.,Raises the user's +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+17,Raises the user's evasion by one stage.,Raises the user's +AFs-evasion+AF0Aew-mechanic:evasion+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+18,Never misses.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Ignores +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- and +AFs-evasion+AF0Aew-mechanic:evasion+AH0- modifiers.
+19,Lowers the target's Attack by one stage.,Lowers the target's +AFs-Attack+AF0Aew-mechanic:attack+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+20,Lowers the target's Defense by one stage.,Lowers the target's +AFs-Defense+AF0Aew-mechanic:defense+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+21,Lowers the target's Speed by one stage.,Lowers the target's +AFs-Speed+AF0Aew-mechanic:speed+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+24,Lowers the target's accuracy by one stage.,Lowers the target's +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+25,Lowers the target's evasion by one stage.,Lowers the target's +AFs-evasion+AF0Aew-mechanic:evasion+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+26,+ACI-Resets all Pok+//0Aw//9AKk-mon's stats, accuracy, and evasion.+ACI-,+ACI-Removes +AFs-stat+AF0Aew-mechanic:stat+AH0-, +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0-, and +AFs-evasion+AF0Aew-mechanic:evasion+AH0- modifiers from every Pok+//0Aw//9AKk-mon on the +AFs-field+AF0Aew-mechanic:field+AH0-.
+
+This does not count as a stat reduction for the purposes of +AFsAXQB7-ability:clear+AC0-body+AH0- or +AFsAXQB7-ability:white+AC0-smoke+AH0-.+ACI-
+27,+ACI-User waits for two turns, then hits back for twice the damage it took.+ACI-,+ACI-User waits for two turns.  On the second turn, the user inflicts twice the damage it accumulated on the last Pok+//0Aw//9AKk-mon to hit it.  Damage inflicted is +AFs-typeless+AF0Aew-mechanic:typeless+AH0-.
+
+This move cannot be selected by +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+28,+ACI-Hits every turn for 2+AC0-3 turns, then confuses the user.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User is forced to attack with this move for 2+//0A4v/9AID//QCT-3 turns,selected at random.  After the last hit, the user becomes +AFs-confused+AF0Aew-mechanic:confused+AH0-.
+
++AFsAXQB7-move:safeguard+AH0- does not protect against the +AFs-confusion+AF0Aew-mechanic:confusion+AH0- from this move.+ACI-
+29,Immediately ends wild battles.  Forces trainers to switch Pok+//0Aw//9AKk-mon.,+ACI-+AFs-Switch+AF0Aew-mechanic:switch+AH0-es the target out for another of its trainer's Pok+//0Aw//9AKk-mon selected at random.  Wild battles end immediately.
+
+Doesn't affect Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:suction+AC0-cups+AH0- or under the effect of +AFsAXQB7-move:ingrain+AH0-.+ACI-
+30,Hits 2+AC0-5 times in one turn.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Hits 2+//0A4v/9AID//QCT-5 times in one turn.
+
+Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times.  Averages to 3 hits per use.+ACI-
+31,User's type changes to the type of one of its moves at random.,+ACI-User's +AFs-type+AF0Aew-mechanic:type+AH0- changes to the +AFs-type+AF0Aew-mechanic:type+AH0- of one of its moves, selected at random.  +AFsAXQB7-move:hidden+AC0-power+AH0- and +AFsAXQB7-move:weather+AC0-ball+AH0- are treated as +AFsAXQB7-type:normal+AH0-.  Only moves with a different +AFs-type+AF0Aew-mechanic:type+AH0- are eligible, and +AFsAXQB7-move:curse+AH0- is never eligible.  If the user has no suitable moves, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.+ACI-
+32,Has a +ACQ-effect+AF8-chance+ACU- chance to make the target flinch.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to make the target +AFsAXQB7-mechanic:flinch+AH0-.
+33,Heals the user by half its max HP.,Heals the user for half its max +AFs-HP+AF0Aew-mechanic:hp+AH0-.
+34,+ACI-Badly poisons the target, inflicting more damage every turn.+ACI-,+AFs-Badly poisons+AF0Aew-mechanic:badly+AC0-poisons+AH0- the target.  Never misses when used by a +AFsAXQB7-type:poison+AH0ALQ-type Pok+//0Aw//9AKk-mon.
+35,Scatters money on the ground worth five times the user's level.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  After the battle ends, the winner receives five times the user's level in extra money for each time this move was used.+ACI-
+36,Reduces damage from special attacks by 50+ACU- for five turns.,+ACI-Erects a barrier around the user's side of the field that reduces damage from +AFs-special+AF0Aew-mechanic:special+AH0- attacks by half for five turns.  In double battles, the reduction is 1/3.  +AFs-Critical hit+AF0Aew-mechanic:critical+AC0-hit+AH0-s are not affected by the barrier.
+
+If the user is holding +AFsAXQB7-item:light+AC0-clay+AH0-, the barrier lasts for eight turns.
+
++AFsAXQB7-move:brick+AC0-break+AH0- or +AFsAXQB7-move:defog+AH0- used by an opponent will destroy the barrier.+ACI-
+37,+ACI-Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-burn+AF0Aew-mechanic:burn+AH0-, +AFs-freeze+AF0Aew-mechanic:freeze+AH0-, or +AFs-paralyze+AF0Aew-mechanic:paralysis+AH0- the target.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-burn+AF0Aew-mechanic:burn+AH0-, +AFs-freeze+AF0Aew-mechanic:freeze+AH0-, or +AFs-paralyze+AF0Aew-mechanic:paralyze+AH0- the target.  One of these effects is selected at random+ADs- they do not each have independent chances to occur.+ACI-
+38,+ACI-User sleeps for two turns, completely healing itself.+ACI-,+ACI-User falls to +AFs-sleep+AF0Aew-mechanic:sleep+AH0- and immediately regains all its +AFs-HP+AF0Aew-mechanic:hp+AH0-.  If the user has another +AFs-major status effect+AF0Aew-mechanic:major+AC0-status+AC0-effect+AH0-, +AFs-sleep+AF0Aew-mechanic:sleep+AH0- will replace it.  The user will always wake up after two turns, or one turn with +AFsAXQB7-ability:early+AC0-bird+AH0-.
+
+This move +AFs-fail+AF0Aew-mechanic:fail+AH0-s if the Pok+//0Aw//9AKk-mon cannot fall asleep due to +AFsAXQB7-move:uproar+AH0-, +AFsAXQB7-ability:insomnia+AH0-, or +AFsAXQB7-ability:vital+AC0-spirit+AH0-.  It also fails if the Pok+//0Aw//9AKk-mon is at full health or is already asleep.+ACI-
+39,Causes a one+AC0-hit KO.,+ACI-Inflicts damage equal to the target's max +AFs-HP+AF0Aew-mechanic:hp+AH0-.  Ignores +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- and +AFs-evasion+AF0Aew-mechanic:evasion+AH0- modifiers.  This move's +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- is 30+ACU- plus 1+ACU- for each level the user is higher than the target.  If the user is a lower level than the target, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+Because this move inflicts a specific and finite amount of damage, +AFsAXQB7-move:endure+AH0- still prevents the target from fainting.
+
+The effects of +AFsAXQB7-move:lock+AC0-on+AH0-, +AFsAXQB7-move:mind+AC0-reader+AH0-, and +AFsAXQB7-ability:no+AC0-guard+AH0- still apply, as long as the user is equal or higher level than the target.  However, they will not give this move a chance to break through +AFsAXQB7-move:detect+AH0- or +AFsAXQB7-move:protect+AH0-.+ACI-
+40,Requires a turn to charge before attacking.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User's +AFs-critical hit+AF0Aew-mechanic:critical+AC0-hit+AH0- rate is one level higher when using this move.  User charges for one turn before attacking.
+
+This move cannot be selected by +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+41,Inflicts damage equal to half the target's HP.,Inflicts +AFs-typeless+AF0Aew-mechanic:typeless+AH0- damage equal to half the target's remaining +AFs-HP+AF0Aew-mechanic:hp+AH0-.
+42,Inflicts 40 points of damage.,Inflicts exactly 40 damage.
+43,Prevents the target from fleeing and inflicts damage for 2+AC0-5 turns.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  For the next 2+//0A4v/9AID//QCT-5 turns, the target cannot leave the field and is damaged for 1/16 its max HP at the end of each turn.  The user continues to use other moves during this time.  If the user leaves the +AFs-field+AF0Aew-mechanic:field+AH0-, this effect ends.
+
+Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times.  Averages to 3 hits per use.
+
++AFsAXQB7-move:rapid+AC0-spin+AH0- cancels this effect.+ACI-
+44,Has an increased chance for a critical hit.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User's +AFs-critical hit+AF0Aew-mechanic:critical+AC0-hit+AH0- rate is one level higher when using this move.
+45,Hits twice in one turn.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Hits twice in one turn.
+46,+ACI-If the user misses, it takes half the damage it would have inflicted in recoil.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If this move misses, is blocked by +AFsAXQB7-move:protect+AH0- or +AFsAXQB7-move:detect+AH0-, or has no effect, the user takes half the damage it would have inflicted in recoil.  This recoil damage will not exceed half the user's max HP.
+
+This move cannot be used while +AFsAXQB7-move:gravity+AH0- is in effect.+ACI-
+47,Protects the user's stats from being changed by enemy moves.,+ACI-Pok+//0Aw//9AKk-mon on the user's side of the +AFs-field+AF0Aew-mechanic:field+AH0- are immune to stat+AC0-lowering effects for five turns.
+
++AFsAXQB7-move:guard+AC0-swap+AH0-, +AFsAXQB7-move:heart+AC0-swap+AH0-, and +AFsAXQB7-move:power+AC0-swap+AH0- may still be used.
+
++AFsAXQB7-move:defog+AH0- used by an opponent will end this effect.+ACI-
+48,Increases the user's chance to score a critical hit.,+ACI-User's +AFs-critical hit+AF0Aew-mechanic:critical+AC0-hit+AH0- rate is two levels higher until it leaves the field.  If the user has already used +AFsAXQB7-move:focus+AC0-energy+AH0- since entering the field, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+This effect is passed on by +AFsAXQB7-move:baton+AC0-pass+AH0-.+ACI-
+49,User receives 1/4 the damage it inflicts in recoil.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User takes 1/4 the damage it inflicts in recoil.
+50,Confuses the target.,+AFs-Confuse+AF0Aew-mechanic:confuse+AH0-s the target.
+51,Raises the user's Attack by two stages.,Raises the user's +AFs-Attack+AF0Aew-mechanic:attack+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.
+52,Raises the user's Defense by two stages.,Raises the user's +AFs-Defense+AF0Aew-mechanic:defense+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.
+53,Raises the user's Speed by two stages.,Raises the user's +AFs-Speed+AF0Aew-mechanic:speed+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.
+54,Raises the user's Special Attack by two stages.,Raises the user's +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.
+55,Raises the user's Special Defense by two stages.,Raises the user's +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.
+58,User becomes a copy of the target until it leaves battle.,+ACI-User copies the target's species, weight, type, +AFs-ability+AF0Aew-mechanic:ability+AH0-, +AFs-calculated stats+AF0Aew-mechanic:calculated+AC0-stats+AH0- (except +AFs-HP+AF0Aew-mechanic:hp+AH0-), and moves.  Copied moves will all have 5 +AFs-PP+AF0Aew-mechanic:pp+AH0- remaining.  +AFs-IV+AF0Aew-mechanic:iv+AH0-s are copied for the purposes of +AFsAXQB7-move:hidden+AC0-power+AH0-, but stats are not recalculated.
+
++AFsAXQB7-item:choice+AC0-band+AH0-, +AFsAXQB7-item:choice+AC0-scarf+AH0-, and +AFsAXQB7-item:choice+AC0-specs+AH0- stay in effect, and the user must select a new move.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-, nor forced by +AFsAXQB7-move:encore+AH0-.+ACI-
+59,Lowers the target's Attack by two stages.,Lowers the target's +AFs-Attack+AF0Aew-mechanic:attack+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.
+60,Lowers the target's Defense by two stages.,Lowers the target's +AFs-Defense+AF0Aew-mechanic:defense+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.
+61,Lowers the target's Speed by two stages.,Lowers the target's +AFs-Speed+AF0Aew-mechanic:speed+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.
+62,Lowers the target's Special Attack by two stages.,Lowers the target's Special Attack by two stages.
+63,Lowers the target's Special Defense by two stages.,Lowers the target's +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.
+66,Reduces damage from physical attacks by half.,+ACI-Erects a barrier around the user's side of the field that reduces damage from +AFs-physical+AF0Aew-mechanic:physical+AH0- attacks by half for five turns.  In double battles, the reduction is 1/3.  +AFs-Critical hit+AF0Aew-mechanic:critical+AC0-hit+AH0-s are not affected by the barrier.
+
+If the user is holding +AFsAXQB7-item:light+AC0-clay+AH0-, the barrier lasts for eight turns.
+
++AFsAXQB7-move:brick+AC0-break+AH0- or +AFsAXQB7-move:defog+AH0- used by an opponent will destroy the barrier.+ACI-
+67,Poisons the target.,+AFs-Poisons+AF0Aew-mechanic:poisons+AH0- the target.
+68,Paralyzes the target.,+AFs-Paralyzes+AF0Aew-mechanic:paralyzes+AH0- the target.
+69,Has a +ACQ-effect+AF8-chance+ACU- chance to lower the target's Attack by one stage.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to lower the target's +AFs-Attack+AF0Aew-mechanic:attack+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+70,Has a +ACQ-effect+AF8-chance+ACU- chance to lower the target's Defense by one stage.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to lower the target's +AFs-Defense+AF0Aew-mechanic:defense+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+71,Has a +ACQ-effect+AF8-chance+ACU- chance to lower the target's Speed by one stage.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to lower the target's +AFs-Speed+AF0Aew-mechanic:speed+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+72,Has a +ACQ-effect+AF8-chance+ACU- chance to lower the target's Special Attack by one stage.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to lower the target's +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+73,Has a +ACQ-effect+AF8-chance+ACU- chance to lower the target's Special Defense by one stage.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to lower the target's +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+74,Has a +ACQ-effect+AF8-chance+ACU- chance to lower the target's accuracy by one stage.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to lower the target's +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+75,XXX new effect for mystical+AC0-fire,XXX new effect for mystical+AC0-fire
+76,User charges for one turn before attacking.  Has a +ACQ-effect+AF8-chance+ACU- chance to make the target flinch.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User charges for one turn before attacking.  +AFs-Critical hit chance+AF0Aew-mechanic:critical+AC0-hit+AC0-chance+AH0- is one level higher than normal.  Has a +ACQ-effect+AF8-chance+ACU- chance to make the target +AFs-flinch+AF0Aew-mechanic:flinch+AH0-.
+
+This move cannot be selected by +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+77,Has a +ACQ-effect+AF8-chance+ACU- chance to confuse the target.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-confuse+AF0Aew-mechanic:confuse+AH0- the target.
+78,Hits twice in the same turn.  Has a +ACQ-effect+AF8-chance+ACU- chance to poison the target.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Hits twice in the same turn.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-poison+AF0Aew-mechanic:poison+AH0- the target.
+79,Never misses.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Ignores +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- and +AFs-evasion+AF0Aew-mechanic:evasion+AH0- modifiers.
+80,+ACI-Transfers 1/4 of the user's max HP into a doll, protecting the user from further damage or status changes until it breaks.+ACI-,+ACI-Transfers 1/4 the user's max +AFs-HP+AF0Aew-mechanic:hp+AH0- into a doll that absorbs damage and causes most negative move effects to +AFs-fail+AF0Aew-mechanic:fail+AH0-.  If the user leaves the +AFs-field+AF0Aew-mechanic:field+AH0-, the doll will vanish.  If the user cannot pay the +AFs-HP+AF0Aew-mechanic:hp+AH0- cost, this move will fail.
+
+The doll takes damage as normal, using the user's stats and types, and will break when its +AFs-HP+AF0Aew-mechanic:hp+AH0- reaches zero.  Self+AC0-inflicted damage from +AFs-confusion+AF0Aew-mechanic:confusion+AH0- or recoil is not absorbed.  Healing effects from opponents ignore the doll and heal the user as normal.  Moves that work based on the user's +AFs-HP+AF0Aew-mechanic:hp+AH0- still do so+ADs- the doll's +AFs-HP+AF0Aew-mechanic:hp+AH0- does not influence any move.
+
+The doll will block +AFs-major status effect+AF0Aew-mechanic:major+AC0-status+AC0-effect+AH0-s, +AFs-confusion+AF0Aew-mechanic:confusion+AH0-, and +AFs-flinch+AF0Aew-mechanic:flinch+AH0-ing.  The effects of +AFsAXQB7-move:smelling+AC0-salts+AH0- and +AFsAXQB7-move:wake+AC0-up+AC0-slap+AH0- do not trigger against a doll, even if the Pok+//0Aw//9AKk-mon behind the doll has the appropriate +AFs-major status effect+AF0Aew-mechanic:major+AC0-status+AC0-effect+AH0-.  Multi+AC0-turn trapping moves like +AFsAXQB7-move:wrap+AH0- will hit the doll for their +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-, but the multi+AC0-turn trapping and damage effects will not activate.
+
+Moves blocked or damage absorbed by the doll do not count as hitting the user or inflicting damage for any effects that respond to such, e.g., +AFsAXQB7-move:avalanche+AH0-, +AFsAXQB7-move:counter+AH0-, or a +AFsAXQB7-item:rowap+AC0-berry+AH0-.  +AFsAXQB7-move:magic+AC0-coat+AH0- still works as normal, even against moves the doll would block.  Opposing Pok+//0Aw//9AKk-mon that damage the doll with a leech move like +AFsAXQB7-move:absorb+AH0- are healed as normal.
+
+It will also block +AFsAXQB7-move:acupressure+AH0-, +AFsAXQB7-move:block+AH0-, the curse effect of +AFsAXQB7-move:curse+AH0-, +AFsAXQB7-move:dream+AC0-eater+AH0-, +AFsAXQB7-move:embargo+AH0-, +AFsAXQB7-move:flatter+AH0-, +AFsAXQB7-move:gastro+AC0-acid+AH0-, +AFsAXQB7-move:grudge+AH0-, +AFsAXQB7-move:heal+AC0-block+AH0-, +AFsAXQB7-move:leech+AC0-seed+AH0-, +AFsAXQB7-move:lock+AC0-on+AH0-, +AFsAXQB7-move:mean+AC0-look+AH0-, +AFsAXQB7-move:mimic+AH0-, +AFsAXQB7-move:mind+AC0-reader+AH0-, +AFsAXQB7-move:nightmare+AH0-, +AFsAXQB7-move:pain+AC0-split+AH0-, +AFsAXQB7-move:psycho+AC0-shift+AH0-, +AFsAXQB7-move:spider+AC0-web+AH0-, +AFsAXQB7-move:sketch+AH0-, +AFsAXQB7-move:swagger+AH0-, +AFsAXQB7-move:switcheroo+AH0-, +AFsAXQB7-move:trick+AH0-, +AFsAXQB7-move:worry+AC0-seed+AH0-, and +AFsAXQB7-move:yawn+AH0-.  A Pok+//0Aw//9AKk-mon affected by +AFsAXQB7-move:yawn+AH0- before summoning the doll will still fall to +AFs-sleep+AF0Aew-mechanic:sleep+AH0-.
+
+The doll blocks +AFsAXQB7-ability:intimidate+AH0-, but all other abilities act as though the doll did not exist.  If the user has an ability that absorbs moves of a certain type for +AFs-HP+AF0Aew-mechanic:hp+AH0- (such as +AFsAXQB7-ability:volt+AC0-absorb+AH0- absorbing +AFsAXQB7-move:thunder+AC0-wave+AH0-), such moves will not be blocked.
+
++AFsAXQB7-item:life+AC0-orb+AH0- and berries that cause +AFs-confusion+AF0Aew-mechanic:confusion+AH0- still work as normal, but their respective +AFs-HP+AF0Aew-mechanic:hp+AH0- loss and +AFs-confusion+AF0Aew-mechanic:confusion+AH0- are absorbed/blocked by the doll.
+
+The user is still vulnerable to damage inflicted when entering or leaving the +AFs-field+AF0Aew-mechanic:field+AH0-, such as by +AFsAXQB7-move:pursuit+AH0- or +AFsAXQB7-move:spikes+AH0AOw- however, the doll will block the +AFs-poison+AF0Aew-mechanic:poison+AH0- effect of +AFsAXQB7-move:toxic+AC0-spikes+AH0-.
+
+The doll is passed on by +AFsAXQB7-move:baton+AC0-pass+AH0-.  It keeps its existing +AFs-HP+AF0Aew-mechanic:hp+AH0-, but uses the replacement Pok+//0Aw//9AKk-mon's stats and types for damage calculation.
+
+All other effects work as normal.+ACI-
+81,User foregoes its next turn to recharge.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User loses its next turn to +ACIAIg-recharge+ACIAIg-, and cannot attack or +AFs-switch+AF0Aew-mechanic:switch+AH0- out during that turn.+ACI-
+82,+ACI-If the user is hit after using this move, its Attack rises by one stage.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Every time the user is hit after it uses this move but before its next action, its +AFs-Attack+AF0Aew-mechanic:attack+AH0- raises by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.+ACI-
+83,Copies the target's last used move.,+ACI-This move is replaced by the target's last successfully used move, and its PP changes to 5.  If the target hasn't used a move since entering the field, if it tried to use a move this turn and +AFs-failed+AF0Aew-mechanic:fail+AH0-, or if the user already knows the targeted move, this move will fail.  This effect vanishes when the user leaves the field.
+
+If +AFsAXQB7-move:chatter+AH0-, +AFsAXQB7-move:metronome+AH0-, +AFsAXQB7-move:mimic+AH0-, +AFsAXQB7-move:sketch+AH0-, or +AFsAXQB7-move:struggle+AH0- is selected, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-, nor selected by +AFsAXQB7-move:assist+AH0- or +AFsAXQB7-move:metronome+AH0-, nor forced by +AFsAXQB7-move:encore+AH0-.+ACI-
+84,Randomly selects and uses any move in the game.,+ACI-Selects any move at random and uses it.  Moves the user already knows are not eligible.  Assist, meta, protection, and reflection moves are also not eligible+ADs- specifically, +AFsAXQB7-move:assist+AH0-, +AFsAXQB7-move:chatter+AH0-, +AFsAXQB7-move:copycat+AH0-, +AFsAXQB7-move:counter+AH0-, +AFsAXQB7-move:covet+AH0-, +AFsAXQB7-move:destiny+AC0-bond+AH0-, +AFsAXQB7-move:detect+AH0-, +AFsAXQB7-move:endure+AH0-, +AFsAXQB7-move:feint+AH0-, +AFsAXQB7-move:focus+AC0-punch+AH0-, +AFsAXQB7-move:follow+AC0-me+AH0-, +AFsAXQB7-move:helping+AC0-hand+AH0-, +AFsAXQB7-move:me+AC0-first+AH0-, +AFsAXQB7-move:metronome+AH0-, +AFsAXQB7-move:mimic+AH0-, +AFsAXQB7-move:mirror+AC0-coat+AH0-, +AFsAXQB7-move:mirror+AC0-move+AH0-, +AFsAXQB7-move:protect+AH0-, +AFsAXQB7-move:quick+AC0-guard+AH0-, +AFsAXQB7-move:sketch+AH0-, +AFsAXQB7-move:sleep+AC0-talk+AH0-, +AFsAXQB7-move:snatch+AH0-, +AFsAXQB7-move:struggle+AH0-, +AFsAXQB7-move:switcheroo+AH0-, +AFsAXQB7-move:thief+AH0-, +AFsAXQB7-move:trick+AH0-, and +AFsAXQB7-move:wide+AC0-guard+AH0- will not be selected by this move.
+
+This move cannot be copied by +AFsAXQB7-move:mimic+AH0- or +AFsAXQB7-move:mirror+AC0-move+AH0-, nor selected by +AFsAXQB7-move:assist+AH0-, +AFsAXQB7-move:metronome+AH0-, or +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+85,+ACI-Seeds the target, stealing HP from it every turn.+ACI-,+ACI-Plants a seed on the target that +AFs-drains+AF0Aew-mechanic:drain+AH0- 1/8 of its max +AFs-HP+AF0Aew-mechanic:hp+AH0- at the end of every turn and heals the user for the amount taken.  Has no effect on +AFsAXQB7-type:grass+AH0- Pok+//0Aw//9AKk-mon.  The seed remains until the target leaves the field.
+
+The user takes damage instead of being healed if the target has +AFsAXQB7-ability:liquid+AC0-ooze+AH0-.
+
++AFsAXQB7-move:rapid+AC0-spin+AH0- will remove this effect.
+
+This effect is passed on by +AFsAXQB7-move:baton+AC0-pass+AH0-.+ACI-
+86,Does nothing.,+ACI-Does nothing.
+
+This move cannot be used while +AFsAXQB7-move:gravity+AH0- is in effect.+ACI-
+87,Disables the target's last used move for 1+AC0-8 turns.,+ACI-Disables the target's last used move, preventing its use for 4+//0A4v/9AID//QCT-7 turns, selected at random, or until the target leaves the +AFs-field+AF0Aew-mechanic:field+AH0-.  If the target hasn't used a move since entering the +AFs-field+AF0Aew-mechanic:field+AH0-, if it tried to use a move this turn and +AFs-failed+AF0Aew-mechanic:failed+AH0-,  if its last used move has 0 PP remaining, or if it already has a move disabled, this move will fail.+ACI-
+88,Inflicts damage equal to the user's level.,+ACI-Inflicts damage equal to the user's level.  Type immunity applies, but other type effects are ignored.+ACI-
+89,Inflicts damage between 50+ACU- and 150+ACU- of the user's level.,+ACI-Inflicts +AFs-typeless+AF0Aew-mechanic:typeless+AH0- damage between 50+ACU- and 150+ACU- of the user's level, selected at random in increments of 10+ACU-.+ACI-
+90,Inflicts twice the damage the user received from the last physical hit it took.,+ACI-Targets the last opposing Pok+//0Aw//9AKk-mon to hit the user with a +AFs-physical+AF0Aew-mechanic:physical+AH0- move this turn.  Inflicts twice the damage that move did to the user.  If there is no eligible target, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.  Type immunity applies, but other type effects are ignored.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-, nor selected by +AFsAXQB7-move:assist+AH0- or +AFsAXQB7-move:metronome+AH0-.+ACI-
+91,Forces the target to repeat its last used move every turn for 2 to 6 turns.,+ACI-The next 4+//0A4v/9AID//QCT-8 times (selected at random) the target attempts to move, it is forced to repeat its last used move.  If the selected move allows the trainer to select a target, an opponent will be selected at random each turn.  If the target is prevented from using the selected move by some other effect, +AFsAXQB7-move:struggle+AH0- will be used instead.  This effect ends if the selected move runs out of +AFs-PP+AF0Aew-mechanic:pp+AH0-.
+
+If the target hasn't used a move since entering the +AFs-field+AF0Aew-mechanic:field+AH0-, if it tried to use a move this turn and +AFs-failed+AF0Aew-mechanic:failed+AH0-, if it does not know the selected move, or if the selected move has 0 +AFs-PP+AF0Aew-mechanic:pp+AH0- remaining, this move will fail.  If the target's last used move was +AFsAXQB7-move:encore+AH0-, +AFsAXQB7-move:mimic+AH0-, +AFsAXQB7-move:mirror+AC0-move+AH0-, +AFsAXQB7-move:sketch+AH0-, +AFsAXQB7-move:struggle+AH0-, or +AFsAXQB7-move:transform+AH0-, this move will fail.+ACI-
+92,Sets the user's and targets's HP to the average of their current HP.,+ACI-Changes the user's and target's remaining +AFs-HP+AF0Aew-mechanic:hp+AH0- to the average of their current remaining +AFs-HP+AF0Aew-mechanic:hp+AH0-.  Ignores +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- and +AFs-evasion+AF0Aew-mechanic:evasion+AH0- modifiers.  This effect does not count as inflicting damage for other moves and effects that respond to damage taken.
+
+This effect +AFs-fail+AF0Aew-mechanic:fail+AH0-s against a +AFsAXQB7-move:substitute+AH0-.+ACI-
+93,Has a +ACQ-effect+AF8-chance+ACU- chance to make the target flinch.  Only works if the user is sleeping.,Only usable if the user is +AFs-sleep+AF0Aew-mechanic:sleep+AH0-ing.  Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to make the target +AFsAXQB7-mechanic:flinch+AH0-.
+94,Changes the user's type to a random type either resistant or immune to the last move used against it.,+ACI-Changes the user's type to a type either resistant or immune to the last damaging move that hit it.  The new type is selected at random and cannot be a type the user already is.  If there is no eligible new type, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.+ACI-
+95,Ensures that the user's next move will hit the target.,+ACI-If the user targets the same target again before the end of the next turn, the move it uses is guaranteed to hit.  This move itself also ignores +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- and +AFs-evasion+AF0Aew-mechanic:evasion+AH0- modifiers.
+
+One+AC0-hit KO moves are also guaranteed to hit, as long as the user is equal or higher level than the target.  This effect also allows the user to hit Pok+//0Aw//9AKk-mon that are off the field due to moves such as +AFsAXQB7-move:dig+AH0- or +AFsAXQB7-move:fly+AH0-.
+
+If the target uses +AFsAXQB7-move:detect+AH0- or +AFsAXQB7-move:protect+AH0- while under the effect of this move, the user is not guaranteed to hit, but has a (100 +AC0- accuracy)+ACU- chance to break through the protection.
+
+This effect is passed on by +AFsAXQB7-move:baton+AC0-pass+AH0-.+ACI-
+96,Permanently becomes the target's last used move.,+ACI-Permanently replaces itself with the target's last used move.  If that move is +AFsAXQB7-move:chatter+AH0- or +AFsAXQB7-move:struggle+AH0-, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+This move cannot be copied by +AFsAXQB7-move:mimic+AH0- or +AFsAXQB7-move:mirror+AC0-move+AH0-, nor selected by +AFsAXQB7-move:assist+AH0- or +AFsAXQB7-move:metronome+AH0-, nor forced by +AFsAXQB7-move:encore+AH0-.+ACI-
+98,Randomly uses one of the user's other three moves.  Only works if the user is sleeping.,+ACI-Only usable if the user is +AFs-sleep+AF0Aew-mechanic:sleep+AH0-ing.  Randomly selects and uses one of the user's other three moves.  Use of the selected move requires and costs 0 +AFs-PP+AF0Aew-mechanic:pp+AH0-.
+
+This move will not select +AFsAXQB7-move:assist+AH0-, +AFsAXQB7-move:bide+AH0-, +AFsAXQB7-move:bounce+AH0-, +AFsAXQB7-move:chatter+AH0-, +AFsAXQB7-move:copycat+AH0-, +AFsAXQB7-move:dig+AH0-, +AFsAXQB7-move:dive+AH0-, +AFsAXQB7-move:fly+AH0-, +AFsAXQB7-move:focus+AC0-punch+AH0-, +AFsAXQB7-move:me+AC0-first+AH0-, +AFsAXQB7-move:metronome+AH0-, +AFsAXQB7-move:mirror+AC0-move+AH0-, +AFsAXQB7-move:shadow+AC0-force+AH0-, +AFsAXQB7-move:skull+AC0-bash+AH0-, +AFsAXQB7-move:sky+AC0-attack+AH0-, +AFsAXQB7-move:sky+AC0-drop+AH0-, +AFsAXQB7-move:sleep+AC0-talk+AH0-, +AFsAXQB7-move:solar+AC0-beam+AH0-, +AFsAXQB7-move:razor+AC0-wind+AH0-, or +AFsAXQB7-move:uproar+AH0-.
+
+If the selected move requires a recharge turn+//0A4v/9AID//QCU-i.e., one of +AFsAXQB7-move:blast+AC0-burn+AH0-, +AFsAXQB7-move:frenzy+AC0-plant+AH0-, +AFsAXQB7-move:giga+AC0-impact+AH0-, +AFsAXQB7-move:hydro+AC0-cannon+AH0-, +AFsAXQB7-move:hyper+AC0-beam+AH0-, +AFsAXQB7-move:roar+AC0-of+AC0-time+AH0-, or +AFsAXQB7-move:rock+AC0-wrecker+AH3//QDi//0AgP/9AJQ-and the user is still +AFs-sleep+AF0Aew-mechanic:sleep+AH0-ing next turn, then it's forced to use this move again and pay another +AFs-PP+AF0Aew-mechanic:pp+AH0- for the recharge turn.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-, nor selected by +AFsAXQB7-move:assist+AH0-, +AFsAXQB7-move:metronome+AH0-, or +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+99,+ACI-If the user faints this turn, the target automatically will, too.+ACI-,+ACI-If the user +AFs-faints+AF0Aew-mechanic:faints+AH0- before its next move, the Pok+//0Aw//9AKk-mon that +AFs-faint+AF0Aew-mechanic:faint+AH0-ed it will automatically +AFs-faint+AF0Aew-mechanic:faint+AH0-.  End+AC0-of+AC0-turn damage is ignored.
+
+This move cannot be selected by +AFsAXQB7-move:assist+AH0- or +AFsAXQB7-move:metronome+AH0-.+ACI-
+100,+ACI-Inflicts more damage when the user has less HP remaining, with a maximum of 200 power.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Power varies inversely with the user's proportional remaining +AFs-HP+AF0Aew-mechanic:hp+AH0-.
+
+64 +ACo- current HP / max HP +AHw- Power
++AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQ-: +AHw- +AC0ALQAtAC0-:
+ 0+//0A4v/9AID//QCT- 1                    +AHw-  200
+ 2+//0A4v/9AID//QCT- 5                    +AHw-  150
+ 6+//0A4v/9AID//QCT-12                    +AHw-  100
+13+//0A4v/9AID//QCT-21                    +AHw-   80
+22+//0A4v/9AID//QCT-42                    +AHw-   40
+43+//0A4v/9AID//QCT-64                    +AHw-   20
++ACI-
+101,Lowers the PP of the target's last used move by 4.,+ACI-Lowers the PP of the target's last used move by 4.  If the target hasn't used a move since entering the +AFs-field+AF0Aew-mechanic:field+AH0-, if it tried to use a move this turn and +AFs-failed+AF0Aew-mechanic:failed+AH0-, or if its last used move has 0 PP remaining, this move will fail.+ACI-
+102,Cannot lower the target's HP below 1.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Will not reduce the target's +AFs-HP+AF0Aew-mechanic:hp+AH0- below 1.
+103,Cures the entire party of major status effects.,Removes +AFs-major status effects+AF0Aew-mechanic:major+AC0-status+AC0-effects+AH0- and +AFs-confusion+AF0Aew-mechanic:confusion+AH0- from every Pok+//0Aw//9AKk-mon in the user's party.
+104,Inflicts regular damage with no additional effect.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.
+105,+ACI-Hits three times, increasing power by 100+ACU- with each successful hit.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Hits three times in the same turn.  The second hit has double power, and the third hit has triple power.  Each hit has a separate +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- check, and this move stops if a hit misses.
+
++AFsAXQB7-ability:skill+AC0-link+AH0- does not apply.+ACI-
+106,Takes the target's item.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the target is holding an item and the user is not, the user will permanently take the item.  Damage is still inflicted if an item cannot be taken.
+
+Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:sticky+AC0-hold+AH0- or +AFsAXQB7-ability:multitype+AH0- are immune to the item theft effect.
+
+The target cannot recover its item with +AFsAXQB7-move:recycle+AH0-.
+
+This move cannot be selected by +AFsAXQB7-move:assist+AH0- or +AFsAXQB7-move:metronome+AH0-.+ACI-
+107,Prevents the target from leaving battle.,+ACI-The target cannot +AFs-switch out+AF0Aew-mechanic:switch+AC0-out+AH0- normally.  Ignores +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- and +AFs-evasion+AF0Aew-mechanic:evasion+AH0- modifiers.  This effect ends when the user leaves the +AFs-field+AF0Aew-mechanic:field+AH0-.
+
+The target may still escape by using +AFsAXQB7-move:baton+AC0-pass+AH0-, +AFsAXQB7-move:u+AC0-turn+AH0-, or a +AFsAXQB7-item:shed+AC0-shell+AH0-.
+
+Both the user and the target pass on this effect with +AFsAXQB7-move:baton+AC0-pass+AH0-.+ACI-
+108,Target loses 1/4 its max HP every turn as long as it's asleep.,+ACI-Only works on +AFs-sleep+AF0Aew-mechanic:sleep+AH0-ing Pok+//0Aw//9AKk-mon.  Gives the target a nightmare, damaging it for 1/4 its max +AFs-HP+AF0Aew-mechanic:hp+AH0- every turn.  If the target wakes up or leaves the +AFs-field+AF0Aew-mechanic:field+AH0-, this effect ends.+ACI-
+109,Raises the user's evasion by two stages.,+ACI-Raises the user's +AFs-evasion+AF0Aew-mechanic:evasion+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.
+
++AFsAXQB7-move:stomp+AH0- and +AFsAXQB7-move:steamroller+AH0- have double power against Pok+//0Aw//9AKk-mon that have used this move since entering the +AFs-field+AF0Aew-mechanic:field+AH0-.+ACI-
+110,Ghosts pay half their max HP to hurt the target every turn.  Others decrease Speed but raise Attack and Defense.,+ACI-If the user is a +AFsAXQB7-type:ghost+AH0-: user pays half its max +AFs-HP+AF0Aew-mechanic:hp+AH0- to place a curse on the target, damaging it for 1/4 its max +AFs-HP+AF0Aew-mechanic:hp+AH0- every turn.
+Otherwise: Lowers the user's +AFs-Speed+AF0Aew-mechanic:speed+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-, and raises its +AFs-Attack+AF0Aew-mechanic:attack+AH0- and +AFs-Defense+AF0Aew-mechanic:defense+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0- each.
+
+The curse effect is passed on by +AFsAXQB7-move:baton+AC0-pass+AH0-.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-.+ACI-
+112,Prevents any moves from hitting the user this turn.,+ACI-No moves will hit the user for the remainder of this turn.  If the user is last to act this turn, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+If the user successfully used +AFsAXQB7-move:detect+AH0-, +AFsAXQB7-move:endure+AH0-, +AFsAXQB7-move:protect+AH0-, +AFsAXQB7-move:quick+AC0-guard+AH0-, or +AFsAXQB7-move:wide+AC0-guard+AH0- on the last turn, this move has a 50+ACU- chance to +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
++AFsAXQB7-move:lock+AC0-on+AH0-, +AFsAXQB7-move:mind+AC0-reader+AH0-, and +AFsAXQB7-ability:no+AC0-guard+AH0- provide a (100 +//0A4v/9AID//QCT- accuracy)+ACU- chance for moves to break through this move.  This does not apply to one+AC0-hit KO moves (+AFsAXQB7-move:fissure+AH0-, +AFsAXQB7-move:guillotine+AH0-, +AFsAXQB7-move:horn+AC0-drill+AH0-, and +AFsAXQB7-move:sheer+AC0-cold+AH0-)+ADs- those are always blocked by this move.
+
++AFsAXQB7-move:thunder+AH0- during +AFsAXQB7-move:rain+AC0-dance+AH0- and +AFsAXQB7-move:blizzard+AH0- during +AFsAXQB7-move:hail+AH0- have a 30+ACU- chance to break through this move.
+
+The following effects are not prevented by this move:
+
++ACo- +AFsAXQB7-move:acupressure+AH0- from an ally
++ACo- +AFsAXQB7-move:curse+AH0-'s curse effect
++ACo- Delayed damage from +AFsAXQB7-move:doom+AC0-desire+AH0- and +AFsAXQB7-move:future+AC0-sight+AH0AOw- however, these moves will be prevented if they are used this turn
++ACo- +AFsAXQB7-move:feint+AH0-, which will also end this move's protection after it hits
++ACo- +AFsAXQB7-move:imprison+AH0-
++ACo- +AFsAXQB7-move:perish+AC0-song+AH0-
++ACo- +AFsAXQB7-move:shadow+AC0-force+AH0-
++ACo- Moves that merely copy the user, such as +AFsAXQB7-move:transform+AH0- or +AFsAXQB7-move:psych+AC0-up+AH0-
+
+This move cannot be selected by +AFsAXQB7-move:assist+AH0- or +AFsAXQB7-move:metronome+AH0-.+ACI-
+113,+ACI-Scatters Spikes, hurting opposing Pok+//0Aw//9AKk-mon that switch in.+ACI-,+ACI-Scatters spikes around the opposing +AFs-field+AF0Aew-mechanic:field+AH0-, which damage opposing Pok+//0Aw//9AKk-mon that enter the +AFs-field+AF0Aew-mechanic:field+AH0- for 1/8 of their max +AFs-HP+AF0Aew-mechanic:hp+AH0-.  Pok+//0Aw//9AKk-mon immune to +AFsAXQB7-type:ground+AH0- moves are immune to this damage, except during +AFsAXQB7-move:gravity+AH0-.  Up to three layers of spikes may be laid down, adding 1/16 to the damage done: two layers of spikes damage for 3/16 max +AFs-HP+AF0Aew-mechanic:hp+AH0-, and three layers damage for 1/4 max +AFs-HP+AF0Aew-mechanic:hp+AH0-.
+
++AFsAXQB7-ability:wonder+AC0-guard+AH0- does not block damage from this effect.
+
++AFsAXQB7-move:rapid+AC0-spin+AH0- removes this effect from its user's side of the +AFs-field+AF0Aew-mechanic:field+AH0-.  +AFsAXQB7-move:defog+AH0- removes this effect from its target's side of the +AFs-field+AF0Aew-mechanic:field+AH0-.+ACI-
+114,+ACI-Forces the target to have no Evade, and allows it to be hit by Normal and Fighting moves even if it's a Ghost.+ACI-,Resets the target's +AFs-evasion+AF0Aew-mechanic:evasion+AH0- to normal and prevents any further boosting until the target leaves the +AFs-field+AF0Aew-mechanic:field+AH0-.  A +AFsAXQB7-type:ghost+AH0- under this effect takes normal damage from +AFsAXQB7-type:normal+AH0- and +AFsAXQB7-type:fighting+AH0- moves.  This move itself ignores +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- and +AFs-evasion+AF0Aew-mechanic:evasion+AH0- modifiers.
+115,User and target both faint after three turns.,+ACI-Every Pok+//0Aw//9AKk-mon is given a counter that starts at 3 and decreases by 1 at the end of every turn, including this one.  When a Pok+//0Aw//9AKk-mon's counter reaches zero, that Pok+//0Aw//9AKk-mon +AFs-faint+AF0Aew-mechanic:faint+AH0-s.  A Pok+//0Aw//9AKk-mon that leaves the +AFs-field+AF0Aew-mechanic:field+AH0- will lose its counter+ADs- its replacement does not inherit the effect, and other Pok+//0Aw//9AKk-mon's counters remain.
+
+This effect is passed on by +AFsAXQB7-move:baton+AC0-pass+AH0-.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-.+ACI-
+116,Changes the weather to a sandstorm for five turns.,+ACI-Changes the weather to a sandstorm for five turns.  Pok+//0Aw//9AKk-mon that are not +AFsAXQB7-type:ground+AH0-, +AFsAXQB7-type:rock+AH0-, or +AFsAXQB7-type:steel+AH0- take 1/16 their max +AFs-HP+AF0Aew-mechanic:hp+AH0- at the end of every turn.  Every +AFsAXQB7-type:rock+AH0- Pok+//0Aw//9AKk-mon's original +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- is raised by 50+ACU- for the duration of this effect.
+
++AFsAXQB7-move:solar+AC0-beam+AH0-'s power is halved.
+
++AFsAXQB7-move:moonlight+AH0-, +AFsAXQB7-move:morning+AC0-sun+AH0-, and +AFsAXQB7-move:synthesis+AH0- only heal 1/4 the user's max +AFs-HP+AF0Aew-mechanic:hp+AH0-.+ACI-
+117,Prevents the user's HP from lowering below 1 this turn.,+ACI-The user's +AFs-HP+AF0Aew-mechanic:hp+AH0- cannot be lowered below 1 by any means for the remainder of this turn.
+
+If the user successfully used +AFsAXQB7-move:detect+AH0-, +AFsAXQB7-move:endure+AH0-, +AFsAXQB7-move:protect+AH0-, +AFsAXQB7-move:quick+AC0-guard+AH0-, or +AFsAXQB7-move:wide+AC0-guard+AH0- on the last turn, this move has a 50+ACU- chance to +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+This move cannot be selected by +AFsAXQB7-move:assist+AH0- or +AFsAXQB7-move:metronome+AH0-.+ACI-
+118,+ACI-Power doubles every turn this move is used in succession after the first, resetting after five turns.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User is forced to use this move for five turns.  Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock+AC0-in ends.  If this move misses or becomes unusable, the lock+AC0-in ends.
+
+If the user has used +AFsAXQB7-move:defense+AC0-curl+AH0- since entering the field, this move has double power.+ACI-
+119,Raises the target's Attack by two stages and confuses the target.,+ACI-Raises the target's +AFs-Attack+AF0Aew-mechanic:attack+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-, then +AFs-confuses+AF0Aew-mechanic:confuses+AH0- it.  If the target's +AFs-Attack+AF0Aew-mechanic:attack+AH0- cannot be +AFs-raised+AF0Aew-mechanic:raised+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-, the +AFs-confusion+AF0Aew-mechanic:confusion+AH0- is not applied.+ACI-
+120,+ACI-Power doubles every turn this move is used in succession after the first, maxing out after five turns.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Power doubles after every time this move is used, whether consecutively or not, maxing out at 16x.  If this move misses or the user leaves the +AFs-field+AF0Aew-mechanic:field+AH0-, power resets.+ACI-
+121,+ACI-Target falls in love if it has the opposite gender, and has a 50+ACU- chance to refuse attacking the user.+ACI-,+ACI-Causes the target to fall in love with the user, giving it a 50+ACU- chance to do nothing each turn.  If the user and target are the same gender, or either is genderless, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.  If either Pok+//0Aw//9AKk-mon leaves the +AFs-field+AF0Aew-mechanic:field+AH0-, this effect ends.+ACI-
+122,+ACI-Power increases with happiness, up to a maximum of 102.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Power increases with +AFs-happiness+AF0Aew-mechanic:happiness+AH0-, given by +AGA-happiness +ACo- 2 / 5+AGA-, to a maximum of 102.  Power bottoms out at 1.+ACI-
+123,Randomly inflicts damage with power from 40 to 120 or heals the target for 1/4 its max HP.,+ACI-Randomly uses one of the following effects.
+
+Effect                                             +AHw- Chance
++AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQ- +AHw- +AC0ALQAtAC0ALQ-:
+Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0- with 40 power  +AHw-    40+ACU-
+Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0- with 80 power  +AHw-    30+ACU-
+Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0- with 120 power +AHw-    10+ACU-
+Heals the target for 1/4 its max +AFs-HP+AF0Aew-mechanic:hp+AH0-    +AHw-    20+ACU-
+
+On average, this move inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0- with 52 power and heals the target for 1/20 its max +AFs-HP+AF0Aew-mechanic:hp+AH0-.+ACI-
+124,+ACI-Power increases as happiness decreases, up to a maximum of 102.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Power increases inversely with +AFs-happiness+AF0Aew-mechanic:happiness+AH0-, given by +AGA-(255 +AC0- happiness) +ACo- 2 / 5+AGA-, to a maximum of 102.  Power bottoms out at 1.+ACI-
+125,Protects the user's field from major status ailments and confusion for five turns.,+ACI-Protects Pok+//0Aw//9AKk-mon on the user's side of the +AFs-field+AF0Aew-mechanic:field+AH0- from +AFs-major status+AF0Aew-mechanic:major+AC0-status+AH0- effects and +AFs-confusion+AF0Aew-mechanic:confusion+AH0- for five turns.  Does not cancel existing ailments.  This effect remains even if the user leaves the +AFs-field+AF0Aew-mechanic:field+AH0-.
+
+If +AFsAXQB7-move:yawn+AH0- is used while this move is in effect, it will immediately +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
++AFsAXQB7-move:defog+AH0- used by an opponent will end this effect.
+
+This effect does not prevent the +AFs-confusion+AF0Aew-mechanic:confusion+AH0- caused by +AFsAXQB7-move:outrage+AH0-, +AFsAXQB7-move:petal+AC0-dance+AH0-, or +AFsAXQB7-move:thrash+AH0-.+ACI-
+126,Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-burn+AF0Aew-mechanic:burn+AH0- the target.  Lets frozen Pok+//0Aw//9AKk-mon thaw themselves.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-burn+AF0Aew-mechanic:burn+AH0- the target.  +AFs-Frozen+AF0Aew-mechanic:frozen+AH0- Pok+//0Aw//9AKk-mon may use this move, in which case they will thaw.+ACI-
+127,Power varies randomly from 10 to 150.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Power is selected at random between 10 and 150, with an average of 71:
+
+Magnitude +AHw- Power +AHw- Chance
++AC0ALQAtAC0ALQAtAC0ALQ-: +AHw- +AC0ALQAtAC0-: +AHw- +AC0ALQAtAC0ALQ-:
+        4 +AHw-    10 +AHw-     5+ACU-
+        5 +AHw-    30 +AHw-    10+ACU-
+        6 +AHw-    50 +AHw-    20+ACU-
+        7 +AHw-    70 +AHw-    30+ACU-
+        8 +AHw-    90 +AHw-    20+ACU-
+        9 +AHw-   110 +AHw-    10+ACU-
+       10 +AHw-   150 +AHw-     5+ACU-
+
+This move has double power against Pok+//0Aw//9AKk-mon currently underground due to +AFsAXQB7-move:dig+AH0-.+ACI-
+128,Allows the trainer to switch out the user and pass effects along to its replacement.,+ACI-User +AFs-switches out+AF0Aew-mechanic:switches+AC0-out+AH0-, and the trainer selects a replacement Pok+//0Aw//9AKk-mon from the party.  +AFs-Stat+AF0Aew-mechanic:stat+AH0- changes, +AFs-confusion+AF0Aew-mechanic:confusion+AH0-, and persistent move effects are passed along to the replacement Pok+//0Aw//9AKk-mon.
+
+The following move effects are passed:
+
++ACo- +AFsAXQB7-move:aqua+AC0-ring+AH0-
++ACo- both the user's and target's effect of +AFsAXQB7-move:block+AH0-, +AFsAXQB7-move:mean+AC0-look+AH0-, and +AFsAXQB7-move:spider+AC0-web+AH0-
++ACo- the curse effect of +AFsAXQB7-move:curse+AH0-
++ACo- +AFsAXQB7-move:embargo+AH0-
++ACo- +AFsAXQB7-move:focus+AC0-energy+AH0- or an activated +AFsAXQB7-item:lansat+AC0-berry+AH0-
++ACo- +AFsAXQB7-move:gastro+AC0-acid+AH0-
++ACo- +AFsAXQB7-move:ingrain+AH0-
++ACo- being sapped by +AFsAXQB7-move:leech+AC0-seed+AH0-
++ACo- being targeted by +AFsAXQB7-move:lock+AC0-on+AH0- or +AFsAXQB7-move:mind+AC0-reader+AH0-
++ACo- +AFsAXQB7-move:magnet+AC0-rise+AH0-
++ACo- +AFsAXQB7-move:perish+AC0-song+AH0-'s counter
++ACo- +AFsAXQB7-move:power+AC0-trick+AH0-
++ACo- +AFsAXQB7-move:substitute+AH0AOw- the doll's HP is unchanged
+
+The replacement Pok+//0Aw//9AKk-mon does not trigger effects that respond to Pok+//0Aw//9AKk-mon switching in.+ACI-
+129,+ACI-Has double power against, and can hit, Pok+//0Aw//9AKk-mon attempting to switch out.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the target attempts to +AFs-switch out+AF0Aew-mechanic:switch+AC0-out+AH0- this turn before the user acts, this move hits the target before it leaves and has double power.
+
+This effect can still hit a Pok+//0Aw//9AKk-mon that +AFs-switches out+AF0Aew-mechanic:switches+AC0-out+AH0- when it has a +AFsAXQB7-move:substitute+AH0- up or when an ally has used +AFsAXQB7-move:follow+AC0-me+AH0-.+ACI-
+130,+ACI-Frees the user from binding moves, removes Leech Seed, and blows away Spikes.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Removes +AFsAXQB7-move:leech+AC0-seed+AH0- from the user, frees the user from +AFsAXQB7-move:bind+AH0-, +AFsAXQB7-move:clamp+AH0-, +AFsAXQB7-move:fire+AC0-spin+AH0-, +AFsAXQB7-move:magma+AC0-storm+AH0-, +AFsAXQB7-move:sand+AC0-tomb+AH0-, +AFsAXQB7-move:whirlpool+AH0-, and +AFsAXQB7-move:wrap+AH0-, and clears +AFsAXQB7-move:spikes+AH0-, +AFsAXQB7-move:stealth+AC0-rock+AH0-, and +AFsAXQB7-move:toxic+AC0-spikes+AH0- from the user's side of the +AFs-field+AF0Aew-mechanic:field+AH0-.  If this move misses or has +AFs-no effect+AF0Aew-mechanic:no+AC0-effect+AH0-, its effect doesn't activate.+ACI-
+131,Inflicts 20 points of damage.,Inflicts exactly 20 damage.
+133,Heals the user by half its max HP.  Affected by weather.,+ACI-Heals the user for half its max +AFs-HP+AF0Aew-mechanic:hp+AH0-.
+
+During +AFsAXQB7-move:sunny+AC0-day+AH0-, the healing is increased to 2/3 max +AFs-HP+AF0Aew-mechanic:hp+AH0-.
+
+During +AFsAXQB7-move:hail+AH0-, +AFsAXQB7-move:rain+AC0-dance+AH0-, or +AFsAXQB7-move:sandstorm+AH0-, the healing is decreased to 1/4 max +AFs-HP+AF0Aew-mechanic:hp+AH0-.+ACI-
+136,Power and type depend upon user's IVs.  Power can range from 30 to 70.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Power and type are determined by the user's +AFs-IV+AF0Aew-mechanic:iv+AH0-s.
+
+Power is given by +AGA-x +ACo- 40 / 63  30+AGA-.  +AGA-x+AGA- is obtained by arranging bit 1 from the +AFs-IV+AF0Aew-mechanic:iv+AH0- for each of +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0-, +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0-, +AFs-Speed+AF0Aew-mechanic:speed+AH0-, +AFs-Defense+AF0Aew-mechanic:defense+AH0-, +AFs-Attack+AF0Aew-mechanic:attack+AH0-, and +AFs-HP+AF0Aew-mechanic:hp+AH0- in that order.  (Bit 1 is 1 if the +AFs-IV+AF0Aew-mechanic:iv+AH0- is of the form +AGA-4n  2+AGA- or +AGA-4n  3+AGA-.  +AGA-x+AGA- is then 64 +ACo- +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- +AFs-IV+AF0Aew-mechanic:iv+AH0- bit 1, plus 32 +ACo- +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- +AFs-IV+AF0Aew-mechanic:iv+AH0- bit 1, etc.)
+
+Power is always between 30 and 70, inclusive.  Average power is 49.5.
+
+Type is given by +AGA-y +ACo- 15 / 63+AGA-, where +AGA-y+AGA- is similar to +AGA-x+AGA- above, except constructed from bit 0.  (Bit 0 is 1 if the +AFs-IV+AF0Aew-mechanic:iv+AH0- is odd.)  The result is looked up in the following table.
+
+Value +AHw- Type
++AC0ALQAtAC0-: +AHw- +AC0ALQAtAC0ALQAtAC0ALQ-
+    0 +AHw- +AFsAXQB7-type:fighting+AH0-
+    1 +AHw- +AFsAXQB7-type:flying+AH0-
+    2 +AHw- +AFsAXQB7-type:poison+AH0-
+    3 +AHw- +AFsAXQB7-type:ground+AH0-
+    4 +AHw- +AFsAXQB7-type:rock+AH0-
+    5 +AHw- +AFsAXQB7-type:bug+AH0-
+    6 +AHw- +AFsAXQB7-type:ghost+AH0-
+    7 +AHw- +AFsAXQB7-type:steel+AH0-
+    8 +AHw- +AFsAXQB7-type:fire+AH0-
+    9 +AHw- +AFsAXQB7-type:water+AH0-
+   10 +AHw- +AFsAXQB7-type:grass+AH0-
+   11 +AHw- +AFsAXQB7-type:electric+AH0-
+   12 +AHw- +AFsAXQB7-type:psychic+AH0-
+   13 +AHw- +AFsAXQB7-type:ice+AH0-
+   14 +AHw- +AFsAXQB7-type:dragon+AH0-
+   15 +AHw- +AFsAXQB7-type:dark+AH0-
+
+This move thus cannot be +AFsAXQB7-type:normal+AH0-.  Most other types have an equal 1/16 chance to be selected, given random +AFs-IV+AF0Aew-mechanic:iv+AH0-s.  However, due to the flooring used here, +AFsAXQB7-type:bug+AH0-, +AFsAXQB7-type:fighting+AH0-, and +AFsAXQB7-type:grass+AH0- appear 5/64 of the time, and +AFsAXQB7-type:dark+AH0- only 1/64 of the time.+ACI-
+137,Changes the weather to rain for five turns.,+ACI-Changes the weather to rain for five turns, during which +AFsAXQB7-type:water+AH0- moves inflict 50+ACU- extra damage, and +AFsAXQB7-type:fire+AH0- moves inflict half damage.
+
+If the user is holding +AFsAXQB7-item:damp+AC0-rock+AH0-, this effect lasts for eight turns.
+
++AFsAXQB7-move:thunder+AH0- has 100+ACU- accuracy.  If the target has used +AFsAXQB7-move:detect+AH0- or +AFsAXQB7-move:protect+AH0-, +AFsAXQB7-move:thunder+AH0- has a (100 +AC0- accuracy)+ACU- chance to break through the protection.
+
++AFsAXQB7-move:solar+AC0-beam+AH0- has half power.
+
++AFsAXQB7-move:moonlight+AH0-, +AFsAXQB7-move:morning+AC0-sun+AH0-, and +AFsAXQB7-move:synthesis+AH0- heal only 1/4 of the user's max +AFs-HP+AF0Aew-mechanic:hp+AH0-.
+
+Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:swift+AC0-swim+AH0- have doubled original +AFs-Speed+AF0Aew-mechanic:speed+AH0-.
+
+Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:forecast+AH0- become +AFsAXQB7-type:water+AH0-.
+
+Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:dry+AC0-skin+AH0- heal 1/8 max +AFs-HP+AF0Aew-mechanic:hp+AH0-, Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:hydration+AH0- are cured of +AFs-major status effects+AF0Aew-mechanic:major+AC0-status+AC0-effects+AH0-, and Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:rain+AC0-dish+AH0- heal 1/16 max +AFs-HP+AF0Aew-mechanic:hp+AH0- at the end of each turn.+ACI-
+138,Changes the weather to sunny for five turns.,+ACI-Changes the weather to sunshine for five turns, during which +AFsAXQB7-type:fire+AH0- moves inflict 50+ACU- extra damage, and +AFsAXQB7-type:water+AH0- moves inflict half damage.
+
+If the user is holding +AFsAXQB7-item:heat+AC0-rock+AH0-, this effect lasts for eight turns.
+
+Pok+//0Aw//9AKk-mon cannot become +AFs-frozen+AF0Aew-mechanic:frozen+AH0-.
+
++AFsAXQB7-move:thunder+AH0- has 50+ACU- accuracy.
+
++AFsAXQB7-move:solar+AC0-beam+AH0- skips its charge turn.
+
++AFsAXQB7-move:moonlight+AH0-, +AFsAXQB7-move:morning+AC0-sun+AH0-, and +AFsAXQB7-move:synthesis+AH0- heal 2/3 of the user's max +AFs-HP+AF0Aew-mechanic:hp+AH0-.
+
+Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:chlorophyll+AH0- have doubled original +AFs-Speed+AF0Aew-mechanic:speed+AH0-.
+
+Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:forecast+AH0- become +AFsAXQB7-type:fire+AH0-.
+
+Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:leaf+AC0-guard+AH0- are not affected by +AFs-major status effects+AF0Aew-mechanic:major+AC0-status+AC0-effects+AH0-.
+
+Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:flower+AC0-gift+AH0- change form+ADs- every Pok+//0Aw//9AKk-mon on their side of the +AFs-field+AF0Aew-mechanic:field+AH0- have their original +AFs-Attack+AF0Aew-mechanic:attack+AH0- and +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- increased by 50+ACU-.
+
+Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:dry+AC0-skin+AH0- lose 1/8 max +AFs-HP+AF0Aew-mechanic:hp+AH0- at the end of each turn.
+
+Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:solar+AC0-power+AH0- have their original +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- raised by 50+ACU- but lose 1/8 their max +AFs-HP+AF0Aew-mechanic:hp+AH0- at the end of each turn.+ACI-
+139,Has a +ACQ-effect+AF8-chance+ACU- chance to raise the user's Defense by one stage.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-. Has a +ACQ-effect+AF8-chance+ACU- chance to raise the user's +AFs-Defense+AF0Aew-mechanic:defense+AH0- one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+140,Has a +ACQ-effect+AF8-chance+ACU- chance to raise the user's Attack by one stage.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-. Has a +ACQ-effect+AF8-chance+ACU- chance to raise the user's +AFs-Attack+AF0Aew-mechanic:attack+AH0- one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+141,Has a +ACQ-effect+AF8-chance+ACU- chance to raise all of the user's stats by one stage.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-. Has a +ACQ-effect+AF8-chance+ACU- chance to raise all of the user's stats one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+143,User pays half its max HP to max out its Attack.,+ACI-User pays half its max +AFs-HP+AF0Aew-mechanic:hp+AH0- to raise its +AFs-Attack+AF0Aew-mechanic:attack+AH0- to +//0- +AFs-stages+AF0Aew-mechanic:stage+AH0-.  If the user cannot pay the +AFs-HP+AF0Aew-mechanic:hp+AH0- cost, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.+ACI-
+144,Discards the user's stat changes and copies the target's.,+ACI-Discards the user's +AFs-stat changes+AF0Aew-mechanic:stat+AC0-changes+AH0- and copies the target's.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-.+ACI-
+145,Inflicts twice the damage the user received from the last special hit it took.,+ACI-Targets the last opposing Pok+//0Aw//9AKk-mon to hit the user with a +AFs-special+AF0Aew-mechanic:special+AH0- move this turn.  Inflicts twice the damage that move did to the user.  If there is no eligible target, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.  Type immunity applies, but other type effects are ignored.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-, nor selected by +AFsAXQB7-move:assist+AH0- or +AFsAXQB7-move:metronome+AH0-.+ACI-
+146,Raises the user's Defense by one stage.  User charges for one turn before attacking.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Raises the user's +AFs-Defense+AF0Aew-mechanic:defense+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.  User then charges for one turn before attacking.
+
+This move cannot be selected by +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+147,Has a +ACQ-effect+AF8-chance+ACU- chance to make the target flinch.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to make each target +AFs-flinch+AF0Aew-mechanic:flinch+AH0-.
+
+If the target is under the effect of +AFsAXQB7-move:bounce+AH0-, +AFsAXQB7-move:fly+AH0-, or +AFsAXQB7-move:sky+AC0-drop+AH0-, this move will hit with double power.+ACI-
+148,Inflicts regular damage and can hit Dig users.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.
+
+If the target is in the first turn of +AFsAXQB7-move:dig+AH0-, this move will hit with double power.+ACI-
+149,Hits the target two turns later.,+ACI-Inflicts +AFs-typeless+AF0Aew-mechanic:typeless+AH0- +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0- at the end of the third turn, starting with this one.  This move cannot score a +AFs-critical hit+AF0Aew-mechanic:critical+AC0-hit+AH0-.  If the target +AFs-switches out+AF0Aew-mechanic:switches+AC0-out+AH0-, its replacement will be hit instead.  Damage is calculated at the time this move is used+ADs- +AFs-stat changes+AF0Aew-mechanic:stat+AC0-changes+AH0- and +AFs-switching out+AF0Aew-mechanic:switching+AC0-out+AH0- during the delay won't change the damage inflicted.  No move with this effect can be used against the same target again until after the end of the third turn.
+
+This effect breaks through +AFsAXQB7-ability:wonder+AC0-guard+AH0-.
+
+If the target is protected by +AFsAXQB7-move:protect+AH0- or +AFsAXQB7-move:detect+AH0- on the turn this move is used, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.  However, the damage on the third turn will break through protection.
+
+The damage is applied at the end of the turn, so it ignores +AFsAXQB7-move:endure+AH0- and +AFsAXQB7-item:focus+AC0-sash+AH0-.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-.+ACI-
+150,Inflicts regular damage and can hit Pok+//0Aw//9AKk-mon in the air.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.
+
+If the target is under the effect of +AFsAXQB7-move:bounce+AH0-, +AFsAXQB7-move:fly+AH0-, or +AFsAXQB7-move:sky+AC0-drop+AH0-, this move will hit with double power.+ACI-
+151,Has a +ACQ-effect+AF8-chance+ACU- chance to make the target flinch.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to make the target +AFs-flinch+AF0Aew-mechanic:flinch+AH0-.
+
+Power is doubled against Pok+//0Aw//9AKk-mon that have used +AFsAXQB7-move:minimize+AH0- since entering the +AFs-field+AF0Aew-mechanic:field+AH0-.+ACI-
+152,Requires a turn to charge before attacking.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User charges for one turn before attacking.
+
+During +AFsAXQB7-move:sunny+AC0-day+AH0-, the charge turn is skipped.
+
+During +AFsAXQB7-move:hail+AH0-, +AFsAXQB7-move:rain+AC0-dance+AH0-, or +AFsAXQB7-move:sandstorm+AH0-, power is halved.
+
+This move cannot be selected by +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+153,Has a +ACQ-effect+AF8-chance+ACU- chance to paralyze the target.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-paralyze+AF0Aew-mechanic:paralyze+AH0- the target.
+
+During +AFsAXQB7-move:rain+AC0-dance+AH0-, this move has 100+ACU- accuracy.  It also has a (100 +AC0- accuracy)+ACU- chance to break through the protection of +AFsAXQB7-move:protect+AH0- and +AFsAXQB7-move:detect+AH0-.
+
+During +AFsAXQB7-move:sunny+AC0-day+AH0-, this move has 50+ACU- accuracy.+ACI-
+154,Immediately ends wild battles.  No effect otherwise.,Does nothing.  Wild battles end immediately.
+155,Hits once for every conscious Pok+//0Aw//9AKk-mon the trainer has.,+ACI-Inflicts +AFs-typeless+AF0Aew-mechanic:typeless+AH0- +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Every Pok+//0Aw//9AKk-mon in the user's party, excepting those that have fainted or have a +AFs-major status effect+AF0Aew-mechanic:major+AC0-status+AC0-effect+AH0-, attacks the target.  Calculated stats are ignored+ADs- the base stats for the target and assorted attackers are used instead.  The random factor in the damage formula is not used.  +AFsAXQB7-type:dark+AH0- Pok+//0Aw//9AKk-mon still get +AFs-STAB+AF0Aew-mechanic:stab+AH0-.
+
+This effect breaks through +AFsAXQB7-ability:wonder+AC0-guard+AH0-.+ACI-
+156,+ACI-User flies high into the air, dodging all attacks, and hits next turn.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User flies high into the air for one turn, becoming immune to attack, and hits on the second turn.
+
+During the immune turn, +AFsAXQB7-move:gust+AH0-, +AFsAXQB7-move:hurricane+AH0-, +AFsAXQB7-move:sky+AC0-uppercut+AH0-, +AFsAXQB7-move:smack+AC0-down+AH0-, +AFsAXQB7-move:thunder+AH0-, +AFsAXQB7-move:twister+AH0-, and +AFsAXQB7-move:whirlwind+AH0- still hit the user normally.  +AFsAXQB7-move:gust+AH0- and +AFsAXQB7-move:twister+AH0- also have double power against the user.
+
+The damage from +AFsAXQB7-move:hail+AH0- and +AFsAXQB7-move:sandstorm+AH0- still applies during the immune turn.
+
+The user may be hit during its immune turn if under the effect of +AFsAXQB7-move:lock+AC0-on+AH0-, +AFsAXQB7-move:mind+AC0-reader+AH0-, or +AFsAXQB7-ability:no+AC0-guard+AH0-.
+
+This move cannot be used while +AFsAXQB7-move:gravity+AH0- is in effect.
+
+This move cannot be selected by +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+157,Raises user's Defense by one stage.,+ACI-Raises user's +AFs-Defense+AF0Aew-mechanic:defense+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+
+After this move is used, the power of +AFsAXQB7-move:ice+AC0-ball+AH0- and +AFsAXQB7-move:rollout+AH0- are doubled until the user leaves the +AFs-field+AF0Aew-mechanic:field+AH0-.+ACI-
+159,Can only be used as the first move after the user enters battle.  Causes the target to flinch.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Causes the target to +AFsAXQB7-mechanic:flinch+AH0-.  Can only be used on the user's first turn after entering the +AFs-field+AF0Aew-mechanic:field+AH0-.
+160,Forced to use this move for several turns.  Pok+//0Aw//9AKk-mon cannot fall asleep in that time.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User is forced to use this move for 2+//0A4v/9AID//QCT-5 turns, selected at random.  All Pok+//0Aw//9AKk-mon on the +AFs-field+AF0Aew-mechanic:field+AH0- wake up, and none can fall to +AFs-sleep+AF0Aew-mechanic:sleep+AH0- until the lock+AC0-in ends.
+
+Pok+//0Aw//9AKk-mon cannot use +AFsAXQB7-move:rest+AH0- during this effect.
+
+This move cannot be selected by +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+161,Stores energy up to three times for use with Spit Up and Swallow.,+ACI-Raises the user's +AFs-Defense+AF0Aew-mechanic:defense+AH0- and +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0- each.  Stores energy for use with +AFsAXQB7-move:spit+AC0-up+AH0- and +AFsAXQB7-move:swallow+AH0-.  Up to three levels of energy can be stored, and all are lost if the user leaves the +AFs-field+AF0Aew-mechanic:field+AH0-.  Energy is still stored even if the stat boosts cannot be applied.
+
+If the user uses +AFsAXQB7-move:baton+AC0-pass+AH0-, the stat boosts are passed as normal, but the stored energy is not.+ACI-
+162,Power is 100 times the amount of energy Stockpiled.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Power is equal to 100 times the amount of energy stored by +AFsAXQB7-move:stockpile+AH0-.  Ignores the random factor in the damage formula.  Stored energy is consumed, and the user's +AFs-Defense+AF0Aew-mechanic:defense+AH0- and +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- are reset to what they would be if +AFsAXQB7-move:stockpile+AH0- had not been used.  If the user has no energy stored, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-.+ACI-
+163,+ACI-Recovers 1/4 HP after one Stockpile, 1/2 HP after two Stockpiles, or full HP after three Stockpiles.+ACI-,+ACI-Heals the user depending on the amount of energy stored by +AFsAXQB7-move:stockpile+AH0-: 1/4 its max +AFs-HP+AF0Aew-mechanic:hp+AH0- after one use, 1/2 its max +AFs-HP+AF0Aew-mechanic:hp+AH0- after two uses, or fully after three uses.  Stored energy is consumed, and the user's +AFs-Defense+AF0Aew-mechanic:defense+AH0- and +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- are reset to what they would be if +AFsAXQB7-move:stockpile+AH0- had not been used.  If the user has no energy stored, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.+ACI-
+165,Changes the weather to a hailstorm for five turns.,+ACI-Changes the weather to hail for five turns, during which non+AC0AWwBdAHs-type:ice+AH0- Pok+//0Aw//9AKk-mon are damaged for 1/16 their max +AFs-HP+AF0Aew-mechanic:hp+AH0- at the end of every turn.
+
+If the user is holding +AFsAXQB7-item:icy+AC0-rock+AH0-, this effect lasts for eight turns.
+
++AFsAXQB7-move:blizzard+AH0- has 100+ACU- accuracy.  If the target has used +AFsAXQB7-move:detect+AH0- or +AFsAXQB7-move:protect+AH0-, +AFsAXQB7-move:blizzard+AH0- has a (100 +AC0- accuracy)+ACU- chance to break through the protection.
+
++AFsAXQB7-move:moonlight+AH0-, +AFsAXQB7-move:morning+AC0-sun+AH0-, and +AFsAXQB7-move:synthesis+AH0- heal only 1/4 of the user's max +AFs-HP+AF0Aew-mechanic:hp+AH0-.
+
+Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:snow+AC0-cloak+AH0- are exempt from this effect's damage.+ACI-
+166,Prevents the target from using the same move twice in a row.,+ACI-Prevents the target from attempting to use the same move twice in a row.  When the target leaves the +AFs-field+AF0Aew-mechanic:field+AH0-, this effect ends.
+
+If the target is forced to attempt a repeated move due to +AFsAXQB7-item:choice+AC0-band+AH0-, +AFsAXQB7-item:choice+AC0-scarf+AH0-, +AFsAXQB7-item:choice+AC0-specs+AH0-, +AFsAXQB7-move:disable+AH0-, +AFsAXQB7-move:encore+AH0-, +AFsAXQB7-move:taunt+AH0-, only having +AFs-PP+AF0Aew-mechanic:pp+AH0- remaining for one move, or any other effect, the target will use +AFsAXQB7-move:struggle+AH0- instead.  The target is then free to use the forced move next turn, as it didn't use that move this turn.+ACI-
+167,Raises the target's Special Attack by one stage and confuses the target.,+ACI-Raises the target's +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-, then +AFs-confuses+AF0Aew-mechanic:confuses+AH0- it.+ACI-
+168,Burns the target.,+AFs-Burns+AF0Aew-mechanic:burns+AH0- the target.
+169,Lowers the target's Attack and Special Attack by two stages.  User faints.,Lowers the target's +AFs-Attack+AF0Aew-mechanic:attack+AH0- and +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.  User faints.
+170,+ACI-Power doubles if user is burned, paralyzed, or poisoned.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the user is +AFs-burned+AF0Aew-mechanic:burned+AH0-, +AFs-paralyzed+AF0Aew-mechanic:paralyzed+AH0-, or +AFs-poisoned+AF0Aew-mechanic:poisoned+AH0-, this move has double power.+ACI-
+171,+ACI-If the user takes damage before attacking, the attack is canceled.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the user takes damage this turn before hitting, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-, nor selected by +AFsAXQB7-move:assist+AH0-, +AFsAXQB7-move:metronome+AH0-, or +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+172,+ACI-If the target is paralyzed, inflicts double damage and cures the paralysis.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the target is +AFs-paralyzed+AF0Aew-mechanic:paralyzed+AH0-, this move has double power, and the target is cured of its +AFs-paralysis+AF0Aew-mechanic:paralysis+AH0-.+ACI-
+173,Redirects the target's single+AC0-target effects to the user for this turn.,+ACI-Until the end of this turn, any moves that opposing Pok+//0Aw//9AKk-mon target solely at the user's ally will instead target the user.  If both Pok+//0Aw//9AKk-mon on the same side of the +AFs-field+AF0Aew-mechanic:field+AH0- use this move on the same turn, the Pok+//0Aw//9AKk-mon that uses it last will become the target.
+
+This effect takes priority over +AFsAXQB7-ability:lightning+AC0-rod+AH0- and +AFsAXQB7-ability:storm+AC0-drain+AH0-.
+
+If the user's ally +AFs-switches out+AF0Aew-mechanic:switches+AC0-out+AH0-, opposing Pok+//0Aw//9AKk-mon may still hit it with +AFsAXQB7-move:pursuit+AH0-.
+
+This move cannot be selected by +AFsAXQB7-move:assist+AH0- or +AFsAXQB7-move:metronome+AH0-.+ACI-
+174,Uses a move which depends upon the terrain.,+ACI-Uses another move chosen according to the terrain.
+
+Terrain                   +AHw- Selected move
++AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0- +AHw- +AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAt-
+Building                  +AHw- +AFsAXQB7-move:tri+AC0-attack+AH0-
+Cave                      +AHw- +AFsAXQB7-move:rock+AC0-slide+AH0-
+Deep water                +AHw- +AFsAXQB7-move:hydro+AC0-pump+AH0-
+Desert                    +AHw- +AFsAXQB7-move:earthquake+AH0-
+Grass                     +AHw- +AFsAXQB7-move:seed+AC0-bomb+AH0-
+Mountain                  +AHw- +AFsAXQB7-move:rock+AC0-slide+AH0-
+Road                      +AHw- +AFsAXQB7-move:earthquake+AH0-
+Shallow water             +AHw- +AFsAXQB7-move:hydro+AC0-pump+AH0-
+Snow                      +AHw- +AFsAXQB7-move:blizzard+AH0-
+Tall grass                +AHw- +AFsAXQB7-move:seed+AC0-bomb+AH0-
++AFsAXQB7-move:electric+AC0-terrain+AH0- +AHw- +AFsAXQB7-move:thunderbolt+AH0-
++AFsAXQB7-move:grassy+AC0-terrain+AH0-   +AHw- +AFsAXQB7-move:energy+AC0-ball+AH0-
++AFsAXQB7-move:misty+AC0-terrain+AH0-    +AHw- +AFsAXQB7-move:moonblast+AH0-
+
+In Pok+//0Aw//9AKk-mon Battle Revolution:
+
+Terrain        +AHw- Selected move
++AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQ- +AHw- +AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAt-
+Courtyard      +AHw- +AFsAXQB7-move:tri+AC0-attack+AH0-
+Crystal        +AHw- +AFsAXQB7-move:rock+AC0-slide+AH0-
+Gateway        +AHw- +AFsAXQB7-move:hydro+AC0-pump+AH0-
+Magma          +AHw- +AFsAXQB7-move:rock+AC0-slide+AH0-
+Main Street    +AHw- +AFsAXQB7-move:tri+AC0-attack+AH0-
+Neon           +AHw- +AFsAXQB7-move:tri+AC0-attack+AH0-
+Stargazer      +AHw- +AFsAXQB7-move:rock+AC0-slide+AH0-
+Sunny Park     +AHw- +AFsAXQB7-move:seed+AC0-bomb+AH0-
+Sunset         +AHw- +AFsAXQB7-move:earthquake+AH0-
+Waterfall      +AHw- +AFsAXQB7-move:seed+AC0-bomb+AH0-
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-.+ACI-
+175,Raises the user's Special Defense by one stage.  User's Electric moves have doubled power next turn.,+ACI-Raises the user's +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.  If the user uses an +AFsAXQB7-type:electric+AH0- move next turn, its power will be doubled.+ACI-
+176,+ACI-For the next few turns, the target can only use damaging moves.+ACI-,+ACI-Target is forced to only use damaging moves for the next 3+//0A4v/9AID//QCT-5 turns, selected at random.  Moves that select other moves not known in advance do not count as damaging.
+
++AFsAXQB7-move:assist+AH0-, +AFsAXQB7-move:copycat+AH0-, +AFsAXQB7-move:me+AC0-first+AH0-, +AFsAXQB7-move:metronome+AH0-, +AFsAXQB7-move:mirror+AC0-move+AH0-, and +AFsAXQB7-move:sleep+AC0-talk+AH0- do not directly inflict damage and thus may not be used.
+
++AFsAXQB7-move:bide+AH0-, +AFsAXQB7-move:counter+AH0-, +AFsAXQB7-move:endeavor+AH0-, +AFsAXQB7-move:metal+AC0-burst+AH0-, and +AFsAXQB7-move:mirror+AC0-coat+AH0- are allowed.+ACI-
+177,Ally's next move inflicts half more damage.,+ACI-Boosts the power of the target's moves by 50+ACU- until the end of this turn.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-, nor selected by +AFsAXQB7-move:assist+AH0- or +AFsAXQB7-move:metronome+AH0-.+ACI-
+178,User and target swap items.,+ACI-User and target permanently swap +AFs-held item+AF0Aew-mechanic:held+AC0-item+AH0-s.  Works even if one of the Pok+//0Aw//9AKk-mon isn't holding anything.  If either Pok+//0Aw//9AKk-mon is holding mail, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+If either Pok+//0Aw//9AKk-mon has +AFsAXQB7-ability:multitype+AH0- or +AFsAXQB7-ability:sticky+AC0-hold+AH0-, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+If this move results in a Pok+//0Aw//9AKk-mon obtaining +AFsAXQB7-item:choice+AC0-band+AH0-, +AFsAXQB7-item:choice+AC0-scarf+AH0-, or +AFsAXQB7-item:choice+AC0-specs+AH0-, and that Pok+//0Aw//9AKk-mon was the latter of the pair to move this turn, then the move it used this turn becomes its chosen forced move.  This applies even if both Pok+//0Aw//9AKk-mon had a choice item before this move was used.  If the first of the two Pok+//0Aw//9AKk-mon gains a choice item, it may select whatever choice move it wishes next turn.
+
+Neither the user nor the target can recover its item with +AFsAXQB7-move:recycle+AH0-.
+
+This move cannot be selected by +AFsAXQB7-move:assist+AH0- or +AFsAXQB7-move:metronome+AH0-.+ACI-
+179,Copies the target's ability.,+ACI-User's ability is replaced with the target's until the user leaves the +AFs-field+AF0Aew-mechanic:field+AH0-.  Ignores +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- and +AFs-evasion+AF0Aew-mechanic:evasion+AH0- modifiers.
+
+If the target has +AFsAXQB7-ability:flower+AC0-gift+AH0-, +AFsAXQB7-ability:forecast+AH0-, +AFsAXQB7-ability:illusion+AH0-, +AFsAXQB7-ability:imposter+AH0-, +AFsAXQB7-ability:multitype+AH0-, +AFsAXQB7-ability:stance+AC0-change+AH0-, +AFsAXQB7-ability:trace+AH0-, +AFsAXQB7-ability:wonder+AC0-guard+AH0-, or +AFsAXQB7-ability:zen+AC0-mode+AH0-, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-.+ACI-
+180,User will recover half its max HP at the end of the next turn.,+ACI-At the end of the next turn, user will be healed for half its max +AFs-HP+AF0Aew-mechanic:hp+AH0-.  If the user is +AFs-switched out+AF0Aew-mechanic:switched+AC0-out+AH0-, its replacement will be healed instead for half of the user's max HP.  If the user +AFs-faint+AF0Aew-mechanic:faint+AH0-s or is forcefully switched by +AFsAXQB7-move:roar+AH0- or +AFsAXQB7-move:whirlwind+AH0-, this effect will not activate.+ACI-
+181,Randomly selects and uses one of the trainer's other Pok+//0Aw//9AKk-mon's moves.,+ACI-Uses a move from another Pok+//0Aw//9AKk-mon in the user's party, both selected at random.  Moves from fainted Pok+//0Aw//9AKk-mon can be used.  If there are no eligible Pok+//0Aw//9AKk-mon or moves, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+This move will not select +AFsAXQB7-move:assist+AH0-, +AFsAXQB7-move:chatter+AH0-, +AFsAXQB7-move:circle+AC0-throw+AH0-, +AFsAXQB7-move:copycat+AH0-, +AFsAXQB7-move:counter+AH0-, +AFsAXQB7-move:covet+AH0-, +AFsAXQB7-move:destiny+AC0-bond+AH0-, +AFsAXQB7-move:detect+AH0-, +AFsAXQB7-move:dig+AH0-, +AFsAXQB7-move:dive+AH0-, +AFsAXQB7-move:dragon+AC0-tail+AH0-, +AFsAXQB7-move:endure+AH0-, +AFsAXQB7-move:feint+AH0-, +AFsAXQB7-move:fly+AH0- +AFsAXQB7-move:focus+AC0-punch+AH0-, +AFsAXQB7-move:follow+AC0-me+AH0-, +AFsAXQB7-move:helping+AC0-hand+AH0-, +AFsAXQB7-move:me+AC0-first+AH0-, +AFsAXQB7-move:metronome+AH0-, +AFsAXQB7-move:mimic+AH0-, +AFsAXQB7-move:mirror+AC0-coat+AH0-, +AFsAXQB7-move:mirror+AC0-move+AH0-, +AFsAXQB7-move:phantom+AC0-force+AH0- +AFsAXQB7-move:protect+AH0-, +AFsAXQB7-move:quick+AC0-guard+AH0-, +AFsAXQB7-move:roar+AH0- +AFsAXQB7-move:shadow+AC0-force+AH0-, +AFsAXQB7-move:sketch+AH0-, +AFsAXQB7-move:sleep+AC0-talk+AH0-, +AFsAXQB7-move:snatch+AH0-, +AFsAXQB7-move:struggle+AH0-, +AFsAXQB7-move:switcheroo+AH0-, +AFsAXQB7-move:thief+AH0-, +AFsAXQB7-move:trick+AH0-, +AFsAXQB7-move:whirlwind+AH0-, or +AFsAXQB7-move:wide+AC0-guard+AH0-.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-, nor selected by +AFsAXQB7-move:metronome+AH0- or +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+182,Prevents the user from leaving battle.  User regains 1/16 of its max HP every turn.,+ACI-Prevents the user from +AFs-switching out+AF0Aew-mechanic:switching+AC0-out+AH0-.  User regains 1/16 of its max +AFs-HP+AF0Aew-mechanic:hp+AH0- at the end of every turn.  If the user was immune to +AFsAXQB7-type:ground+AH0- attacks, it will now take normal damage from them.
+
++AFsAXQB7-move:roar+AH0- and +AFsAXQB7-move:whirlwind+AH0- will not affect the user.  The user cannot use +AFsAXQB7-move:magnet+AC0-rise+AH0-.
+
+The user may still use +AFsAXQB7-move:u+AC0-turn+AH0- to leave the +AFs-field+AF0Aew-mechanic:field+AH0-.
+
+This effect can be passed with +AFsAXQB7-move:baton+AC0-pass+AH0-.+ACI-
+183,Lowers the user's Attack and Defense by one stage after inflicting damage.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-, then lowers the user's +AFs-Attack+AF0Aew-mechanic:attack+AH0- and +AFs-Defense+AF0Aew-mechanic:defense+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0- each.+ACI-
+184,Reflects back the first effect move used on the user this turn.,+ACI-The first non+AC0-damaging move targeting the user this turn that inflicts +AFs-major status effect+AF0Aew-mechanic:major+AC0-status+AC0-effect+AH0-s, +AFs-stat change+AF0Aew-mechanic:stat+AC0-change+AH0-s, or +AFs-trap+AF0Aew-mechanic:trap+AH0-ping effects will be reflected at its user.
+
++AFsAXQB7-move:defog+AH0-, +AFsAXQB7-move:memento+AH0-, and +AFsAXQB7-move:teeter+AC0-dance+AH0- are not reflected.
+
++AFsAXQB7-move:attract+AH0-, +AFsAXQB7-move:flatter+AH0-, +AFsAXQB7-move:gastro+AC0-acid+AH0-, +AFsAXQB7-move:leech+AC0-seed+AH0-, +AFsAXQB7-move:swagger+AH0-, +AFsAXQB7-move:worry+AC0-seed+AH0-, and +AFsAXQB7-move:yawn+AH0- are reflected.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-.+ACI-
+185,User recovers the item it last used up.,+ACI-User recovers the last item consumed by the user or a Pok+//0Aw//9AKk-mon in its position on the +AFs-field+AF0Aew-mechanic:field+AH0-.  The item must be used again before it can be recovered by this move again.  If the user is holding an item, this move +AFs-fail+AF0Aew-mechanic:fail+AH0-s.
+
+Items taken or given away by +AFsAXQB7-move:covet+AH0-, +AFsAXQB7-move:knock+AC0-off+AH0-, +AFsAXQB7-move:switcheroo+AH0-, +AFsAXQB7-move:thief+AH0-, or +AFsAXQB7-move:trick+AH0- may not be recovered.+ACI-
+186,Inflicts double damage if the user takes damage before attacking this turn.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the target damaged the user this turn and was the last to do so, this move has double power.
+
++AFsAXQB7-move:pain+AC0-split+AH0- does not count as damaging the user.+ACI-
+187,Destroys Reflect and Light Screen.,+ACI-Destroys any +AFsAXQB7-move:light+AC0-screen+AH0- or +AFsAXQB7-move:reflect+AH0- on the target's side of the +AFs-field+AF0Aew-mechanic:field+AH0-, then inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.+ACI-
+188,Target sleeps at the end of the next turn.,+ACI-Puts the target to +AFs-sleep+AF0Aew-mechanic:sleep+AH0- at the end of the next turn.  Ignores +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- and +AFs-evasion+AF0Aew-mechanic:evasion+AH0- modifiers.  If the target leaves the +AFs-field+AF0Aew-mechanic:field+AH0-, this effect is canceled.  If the target has a status effect when this move is used, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+If the target is protected by +AFsAXQB7-move:safeguard+AH0- when this move is used, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
++AFsAXQB7-ability:insomnia+AH0- and +AFsAXQB7-ability:vital+AC0-spirit+AH0- prevent the +AFs-sleep+AF0Aew-mechanic:sleep+AH0- if the target has either at the end of the next turn, but will not cause this move to +AFs-fail+AF0Aew-mechanic:fail+AH0- on use.+ACI-
+189,Target drops its held item.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Target loses its +AFs-held item+AF0Aew-mechanic:held+AC0-item+AH0-.
+
+Neither the user nor the target can recover its item with +AFsAXQB7-move:recycle+AH0-.
+
+If the target has +AFsAXQB7-ability:multitype+AH0- or +AFsAXQB7-ability:sticky+AC0-hold+AH0-, it will take damage but not lose its item.+ACI-
+190,Lowers the target's HP to equal the user's.,+ACI-Inflicts exactly enough damage to lower the target's +AFs-HP+AF0Aew-mechanic:hp+AH0- to equal the user's.  If the target's HP is not higher than the user's, this move has no effect.  Type immunity applies, but other type effects are ignored.  This effect counts as damage for moves that respond to damage.+ACI-
+191,+ACI-Inflicts more damage when the user has more HP remaining, with a maximum of 150 power.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Power increases with the user's remaining +AFs-HP+AF0Aew-mechanic:hp+AH0- and is given by +AGA-150 +ACo- HP / max HP+AGA-, to a maximum of 150 when the user has full HP.+ACI-
+192,User and target swap abilities.,+ACI-User and target switch abilities.  Ignores +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- and +AFs-evasion+AF0Aew-mechanic:evasion+AH0- modifiers.
+
+If either Pok+//0Aw//9AKk-mon has +AFsAXQB7-ability:multitype+AH0- or +AFsAXQB7-ability:wonder+AC0-guard+AH0-, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.+ACI-
+193,Prevents the target from using any moves that the user also knows.,+ACI-Prevents any Pok+//0Aw//9AKk-mon on the opposing side of the +AFs-field+AF0Aew-mechanic:field+AH0- from using any move the user knows until the user leaves the +AFs-field+AF0Aew-mechanic:field+AH0-.  This effect is live+ADs- if the user obtains new moves while on the +AFs-field+AF0Aew-mechanic:field+AH0-, these moves become restricted.  If no opposing Pok+//0Aw//9AKk-mon knows any of the user's moves when this move is used, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.+ACI-
+194,+ACI-Cleanses the user of a burn, paralysis, or poison.+ACI-,+ACI-Removes a +AFs-burn+AF0Aew-mechanic:burn+AH0-, +AFs-paralysis+AF0Aew-mechanic:paralysis+AH0-, or +AFs-poison+AF0Aew-mechanic:poison+AH0- from the user.+ACI-
+195,+ACI-If the user faints this turn, the PP of the move that fainted it drops to 0.+ACI-,+ACI-If the user +AFs-faint+AF0Aew-mechanic:faint+AH0-s before it next acts, the move that fainted it will have its +AFs-PP+AF0Aew-mechanic:pp+AH0- dropped to 0.  End+AC0-of+AC0-turn damage does not trigger this effect.+ACI-
+196,+ACI-Steals the target's move, if it's self+AC0-targeted.+ACI-,+ACI-The next time a Pok+//0Aw//9AKk-mon uses a beneficial move on itself or itself and its ally this turn, the user of this move will steal the move and use it itself.  Moves which may be stolen by this move are identified by the +ACIAIg-snatchable+ACIAIg- flag.
+
+If two Pok+//0Aw//9AKk-mon use this move on the same turn, the faster Pok+//0Aw//9AKk-mon will steal the first beneficial move, and the slower Pok+//0Aw//9AKk-mon will then steal it again+//0A4v/9AID//QCU-thus, only the slowest Pok+//0Aw//9AKk-mon using this move ultimately gains a stolen move's effect.
+
+If the user steals +AFsAXQB7-move:psych+AC0-up+AH0-, it will target the Pok+//0Aw//9AKk-mon that used +AFsAXQB7-move:psych+AC0-up+AH0-.  If the user was the original target of +AFsAXQB7-move:psych+AC0-up+AH0-, and the Pok+//0Aw//9AKk-mon that originally used it's affected by +AFsAXQB7-ability:pressure+AH0-, it will only lose 1 +AFs-PP+AF0Aew-mechanic:pp+AH0-.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-, nor selected by +AFsAXQB7-move:assist+AH0- or +AFsAXQB7-move:metronome+AH0-.+ACI-
+197,+ACI-Inflicts more damage to heavier targets, with a maximum of 120 power.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Power increases with the target's weight in kilograms, to a maximum of 120.
+
+Target's weight +AHw- Power
++AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAt- +AHw- +AC0ALQAtAC0-:
+Up to 10kg      +AHw-    20
+Up to 25kg      +AHw-    40
+Up to 50kg      +AHw-    60
+Up to 100kg     +AHw-    80
+Up to 200kg     +AHw-   100
+Above 200kg     +AHw-   120
++ACI-
+198,Has a +ACQ-effect+AF8-chance+ACU- chance to inflict a status effect which depends upon the terrain.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to inflict an effect chosen according to the terrain.
+
+Terrain        +AHw- Effect
++AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQ- +AHw- +AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0-
+Building       +AHw- +AFs-Paralyze+AF0Aew-mechanic:paralyze+AH0-s target
+Cave           +AHw- Makes target +AFs-flinch+AF0Aew-mechanic:flinch+AH0-
+Deep water     +AHw- Lowers target's +AFs-Attack+AF0Aew-mechanic:attack+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-
+Desert         +AHw- Lowers target's +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-
+Grass          +AHw- Puts target to +AFs-sleep+AF0Aew-mechanic:sleep+AH0-
+Mountain       +AHw- Makes target +AFs-flinch+AF0Aew-mechanic:flinch+AH0-
+Road           +AHw- Lowers target's +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-
+Shallow water  +AHw- Lowers target's +AFs-Attack+AF0Aew-mechanic:attack+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-
+Snow           +AHw- +AFs-Freezes+AF0Aew-mechanic:freezes+AH0- target
+Tall grass     +AHw- Puts target to +AFs-sleep+AF0Aew-mechanic:sleep+AH0-
+
+In Pok+//0Aw//9AKk-mon Battle Revolution:
+
+Terrain        +AHw- Effect
++AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQ- +AHw- +AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0-
+Courtyard      +AHw- +AFs-Paralyze+AF0Aew-mechanic:paralyze+AH0-s target
+Crystal        +AHw- Makes target +AFs-flinch+AF0Aew-mechanic:flinch+AH0-
+Gateway        +AHw- Lowers target's +AFs-Attack+AF0Aew-mechanic:attack+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-
+Magma          +AHw- Makes target +AFs-flinch+AF0Aew-mechanic:flinch+AH0-
+Main Street    +AHw- +AFs-Paralyze+AF0Aew-mechanic:paralyze+AH0-s target
+Neon           +AHw- +AFs-Paralyze+AF0Aew-mechanic:paralyze+AH0-s target
+Stargazer      +AHw- Makes target +AFs-flinch+AF0Aew-mechanic:flinch+AH0-
+Sunny Park     +AHw- Puts target to +AFs-sleep+AF0Aew-mechanic:sleep+AH0-
+Sunset         +AHw- Lowers target's +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-
+Waterfall      +AHw- Puts target to +AFs-sleep+AF0Aew-mechanic:sleep+AH0-
++ACI-
+199,User receives 1/3 the damage inflicted in recoil.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User takes 1/3 the damage it inflicts in recoil.
+200,Confuses the target.,+AFs-Confuse+AF0Aew-mechanic:confuse+AH0-s all targets.
+201,Has an increased chance for a critical hit and a +ACQ-effect+AF8-chance+ACU- chance to +AFs-burn+AF0Aew-mechanic:burn+AH0- the target.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User's +AFs-critical hit+AF0Aew-mechanic:critical+AC0-hit+AH0- rate is one level higher when using this move. Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-burn+AF0Aew-mechanic:burn+AH0- the target.
+202,Halves all Electric+AC0-type damage.,+ACI-+AFsAXQB7-type:electric+AH0- moves inflict half damage, regardless of target.  If the user leaves the +AFs-field+AF0Aew-mechanic:field+AH0-, this effect ends.+ACI-
+203,Has a +ACQ-effect+AF8-chance+ACU- chance to badly poison the target.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-badly poison+AF0Aew-mechanic:badly+AC0-poison+AH0- the target.
+204,+ACI-If there be weather, this move has doubled power and the weather's type.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If a weather move is active, this move has double power, and its type becomes the type of the weather move.  +AFsAXQB7-move:shadow+AC0-sky+AH0- is typeless for the purposes of this move.+ACI-
+205,Lowers the user's Special Attack by two stages after inflicting damage.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-, then lowers the user's +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.+ACI-
+206,Lowers the target's Attack and Defense by one stage.,Lowers the target's +AFs-Attack+AF0Aew-mechanic:attack+AH0- and +AFs-Defense+AF0Aew-mechanic:defense+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+207,Raises the user's Defense and Special Defense by one stage.,Raises the user's +AFs-Defense+AF0Aew-mechanic:defense+AH0- and +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+208,Inflicts regular damage and can hit Bounce and Fly users.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.
+
+This move can hit Pok+//0Aw//9AKk-mon under the effect of +AFsAXQB7-move:bounce+AH0-, +AFsAXQB7-move:fly+AH0-, or +AFsAXQB7-move:sky+AC0-drop+AH0-.+ACI-
+209,Raises the user's Attack and Defense by one stage.,Raises the user's +AFs-Attack+AF0Aew-mechanic:attack+AH0- and +AFs-Defense+AF0Aew-mechanic:defense+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0- each.
+210,Has an increased chance for a critical hit and a +ACQ-effect+AF8-chance+ACU- chance to poison the target.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User's +AFs-critical hit+AF0Aew-mechanic:critical+AC0-hit+AH0- rate is one level higher when using this move. Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-poison+AF0Aew-mechanic:poison+AH0- the target.
+211,Halves all Fire+AC0-type damage.,+ACI-+AFsAXQB7-type:fire+AH0- moves inflict half damage, regardless of target.  If the user leaves the +AFs-field+AF0Aew-mechanic:field+AH0-, this effect ends.+ACI-
+212,Raises the user's Special Attack and Special Defense by one stage.,Raises the user's +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- and +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0- each.
+213,Raises the user's Attack and Speed by one stage.,Raises the user's +AFs-Attack+AF0Aew-mechanic:attack+AH0- and +AFs-Speed+AF0Aew-mechanic:speed+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0- each.
+214,User's type changes to match the terrain.,+ACI-User's type changes according to the terrain.
+
+Terrain        +AHw- New type
++AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQ- +AHw- +AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQ-
+Building       +AHw- +AFsAXQB7-type:normal+AH0-
+Cave           +AHw- +AFsAXQB7-type:rock+AH0-
+Desert         +AHw- +AFsAXQB7-type:ground+AH0-
+Grass          +AHw- +AFsAXQB7-type:grass+AH0-
+Mountain       +AHw- +AFsAXQB7-type:rock+AH0-
+Ocean          +AHw- +AFsAXQB7-type:water+AH0-
+Pond           +AHw- +AFsAXQB7-type:water+AH0-
+Road           +AHw- +AFsAXQB7-type:ground+AH0-
+Snow           +AHw- +AFsAXQB7-type:ice+AH0-
+Tall grass     +AHw- +AFsAXQB7-type:grass+AH0-
+
+In Pok+//0Aw//9AKk-mon Battle Revolution:
+
+Terrain        +AHw- New type
++AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQ- +AHw- +AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQ-
+Courtyard      +AHw- +AFsAXQB7-type:normal+AH0-
+Crystal        +AHw- +AFsAXQB7-type:rock+AH0-
+Gateway        +AHw- +AFsAXQB7-type:water+AH0-
+Magma          +AHw- +AFsAXQB7-type:rock+AH0-
+Main Street    +AHw- +AFsAXQB7-type:normal+AH0-
+Neon           +AHw- +AFsAXQB7-type:normal+AH0-
+Stargazer      +AHw- +AFsAXQB7-type:rock+AH0-
+Sunny Park     +AHw- +AFsAXQB7-type:grass+AH0-
+Sunset         +AHw- +AFsAXQB7-type:ground+AH0-
+Waterfall      +AHw- +AFsAXQB7-type:grass+AH0-
++ACI-
+215,Heals the user by half its max HP.,+ACI-Heals the user for half its max +AFs-HP+AF0Aew-mechanic:hp+AH0-.  If the user is +AFsAXQB7-type:flying+AH0-, its +AFsAXQB7-type:flying+AH0- type is ignored until the end of this turn.+ACI-
+216,Disables moves and immunities that involve flying or levitating for five turns.,+ACI-For five turns (including this one), all immunities to +AFsAXQB7-type:ground+AH0- moves are disabled.  For the duration of this effect, the +AFs-evasion+AF0Aew-mechanic:evasion+AH0- of every Pok+//0Aw//9AKk-mon on the field is lowered by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.  Cancels the effects of +AFsAXQB7-move:bounce+AH0-, +AFsAXQB7-move:fly+AH0-, and +AFsAXQB7-move:sky+AC0-drop+AH0-.
+
+Specifically, +AFsAXQB7-type:flying+AH0- Pok+//0Aw//9AKk-mon and those with +AFsAXQB7-ability:levitate+AH0- or that have used +AFsAXQB7-move:magnet+AC0-rise+AH0- are no longer immune to +AFsAXQB7-type:ground+AH0- attacks, +AFsAXQB7-ability:arena+AC0-trap+AH0-, +AFsAXQB7-move:spikes+AH0-, or +AFsAXQB7-move:toxic+AC0-spikes+AH0-.
+
++AFsAXQB7-move:bounce+AH0-, +AFsAXQB7-move:fly+AH0-, +AFsAXQB7-move:sky+AC0-drop+AH0-, +AFsAXQB7-move:high+AC0-jump+AC0-kick+AH0-, +AFsAXQB7-move:jump+AC0-kick+AH0-, and +AFsAXQB7-move:splash+AH0- cannot be used while this move is in effect.
+
++ACo-Bug+ACo-: If this move is used during a double or triple battle while Pok+//0Aw//9AKk-mon are under the effect of +AFsAXQB7-move:sky+AC0-drop+AH0-, Sky Drop's effect is not correctly canceled on its target, and it remains high in the air indefinitely.  As Sky Drop prevents the target from acting, the only way to subsequently remove it from the field is to faint it.+ACI-
+217,+ACI-Forces the target to have no evasion, and allows it to be hit by Psychic moves even if it's Dark.+ACI-,Resets the target's +AFs-evasion+AF0Aew-mechanic:evasion+AH0- to normal and prevents any further boosting until the target leaves the +AFs-field+AF0Aew-mechanic:field+AH0-.  A +AFsAXQB7-type:dark+AH0- Pok+//0Aw//9AKk-mon under this effect takes normal damage from +AFsAXQB7-type:psychic+AH0- moves.  This move itself ignores +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- and +AFs-evasion+AF0Aew-mechanic:evasion+AH0- modifiers.
+218,+ACI-If the target is asleep, has double power and wakes it up.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the target is +AFs-sleep+AF0Aew-mechanic:sleep+AH0-ing, this move has double power, and the target wakes up.+ACI-
+219,Lowers user's Speed by one stage.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-, then lowers the user's +AFs-Speed+AF0Aew-mechanic:speed+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.+ACI-
+220,+ACI-Power raises when the user has lower Speed, up to a maximum of 150.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Power increases with the target's current +AFs-Speed+AF0Aew-mechanic:speed+AH0- compared to the user, given by +AGA-1  25 +ACo- target Speed / user Speed+AGA-, capped at 150.+ACI-
+221,User faints.  Its replacement has its HP fully restored and any major status effect removed.,+ACI-User faints.  Its replacement's +AFs-HP+AF0Aew-mechanic:hp+AH0- is fully restored, and any +AFs-major status effect+AF0Aew-mechanic:major+AC0-status+AC0-effect+AH0- is removed.  If the replacement Pok+//0Aw//9AKk-mon is immediately fainted by a switch+AC0-in effect, the next replacement is healed by this move instead.+ACI-
+222,Has double power against Pok+//0Aw//9AKk-mon that have less than half their max HP remaining.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the target has less than half its max +AFs-HP+AF0Aew-mechanic:hp+AH0- remaining, this move has double power.+ACI-
+223,Power and type depend on the held berry.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Power and type are determined by the user's held berry.  The berry is consumed.  If the user is not holding a berry, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.+ACI-
+224,Hits through Protect and Detect.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Removes the effects of +AFsAXQB7-move:detect+AH0- or +AFsAXQB7-move:protect+AH0- from the target before hitting.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-, nor selected by +AFsAXQB7-move:assist+AH0- or +AFsAXQB7-move:metronome+AH0-.+ACI-
+225,+ACI-If target has a berry, inflicts double damage and uses the berry.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the target is holding a berry, this move has double power, and the user takes the berry and uses it immediately.
+
+If the target is holding a +AFsAXQB7-item:jaboca+AC0-berry+AH0- or +AFsAXQB7-item:rowap+AC0-berry+AH0-, the berry is still removed, but has no effect.
+
+If this move is +AFs-super effective+AF0Aew-mechanic:super+AC0-effective+AH0- and the target is holding a berry that can reduce this move's damage, it will do so, and will not be stolen.+ACI-
+226,+ACI-For three turns, friendly Pok+//0Aw//9AKk-mon have doubled Speed.+ACI-,+ACI-For the next three turns, all Pok+//0Aw//9AKk-mon on the user's side of the +AFs-field+AF0Aew-mechanic:field+AH0- have their original +AFs-Speed+AF0Aew-mechanic:speed+AH0- doubled.  This effect remains if the user leaves the +AFs-field+AF0Aew-mechanic:field+AH0-.+ACI-
+227,Raises one of a friendly Pok+//0Aw//9AKk-mon's stats at random by two stages.,+ACI-Raises one of the target's stats by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.  The raised stat is chosen at random from any stats that can be raised by two stages.  If no stat is eligible, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+If the target has a +AFsAXQB7-move:substitute+AH0-, this move will have no effect, even if the user is the target.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-.+ACI-
+228,Strikes back at the last Pok+//0Aw//9AKk-mon to hit the user this turn with 1.5+//0Aw//9AJc- the damage.,+ACI-Targets the last opposing Pok+//0Aw//9AKk-mon to hit the user with a damaging move this turn.  Inflicts 1.5+//0Aw//9AJc- the damage that move did to the user.  If there is no eligible target, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.  Type immunity applies, but other type effects are ignored.+ACI-
+229,User must switch out after attacking.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-, then the user immediately +AFs-switches out+AF0Aew-mechanic:switches+AC0-out+AH0-, and the trainer selects a replacement Pok+//0Aw//9AKk-mon from the party.  If the target +AFs-faint+AF0Aew-mechanic:faint+AH0-s from this attack, the user's trainer selects the new Pok+//0Aw//9AKk-mon to send out first.  If the user is the last Pok+//0Aw//9AKk-mon in its party that can battle, it will not +AFs-switch out+AF0Aew-mechanic:switch+AC0-out+AH0-.
+
+The user may be hit by +AFsAXQB7-move:pursuit+AH0- when it +AFs-switches out+AF0Aew-mechanic:switches+AC0-out+AH0-, if it has been targeted and +AFsAXQB7-move:pursuit+AH0- has not yet been used.
+
+This move may be used even if the user is under the effect of +AFsAXQB7-move:ingrain+AH0-.  +AFsAXQB7-move:ingrain+AH0-'s effect will end.+ACI-
+230,Lowers the user's Defense and Special Defense by one stage after inflicting damage.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-, then lowers the user's +AFs-Defense+AF0Aew-mechanic:defense+AH0- and +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0- each.+ACI-
+231,Power is doubled if the target has already moved this turn.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the target uses a move or +AFs-switches out+AF0Aew-mechanic:switches+AC0-out+AH0- this turn before this move is used, this move has double power.+ACI-
+232,Power is doubled if the target has already received damage this turn.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the target takes damage this turn for any reason before this move is used, this move has double power.+ACI-
+233,Target cannot use held items.,+ACI-Target cannot use its held item for five turns.  If the target leaves the +AFs-field+AF0Aew-mechanic:field+AH0-, this effect ends.
+
+If a Pok+//0Aw//9AKk-mon under this effect uses +AFsAXQB7-move:bug+AC0-bite+AH0- or +AFsAXQB7-move:pluck+AH0- on a Pok+//0Aw//9AKk-mon holding a berry, the berry is destroyed but not used.  If a Pok+//0Aw//9AKk-mon under this effect uses +AFsAXQB7-move:fling+AH0-, it will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+This effect is passed by +AFsAXQB7-move:baton+AC0-pass+AH0-.+ACI-
+234,Throws held item at the target+ADs- power depends on the item.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Power and type are determined by the user's +AFs-held item+AF0Aew-mechanic:held+AC0-item+AH0-.  The item is consumed.  If the user is not holding an item, or its item has no set type and power, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+This move ignores +AFsAXQB7-ability:sticky+AC0-hold+AH0-.
+
+If the user is under the effect of +AFsAXQB7-move:embargo+AH0-, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.+ACI-
+235,Transfers the user's major status effect to the target.,+ACI-If the user has a +AFs-major status effect+AF0Aew-mechanic:major+AC0-status+AC0-effect+AH0- and the target does not, the user's status is transferred to the target.+ACI-
+236,+ACI-Power increases when this move has less PP, up to a maximum of 200.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Power is determined by the +AFs-PP+AF0Aew-mechanic:pp+AH0- remaining for this move, after its +AFs-PP+AF0Aew-mechanic:pp+AH0- cost is deducted.  Ignores +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- and +AFs-evasion+AF0Aew-mechanic:evasion+AH0- modifiers.
+
+PP remaining +AHw- Power
++AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAt- +AHw- +AC0ALQAtAC0-:
+4 or more    +AHw-    40
+3            +AHw-    50
+2            +AHw-    60
+1            +AHw-    80
+0            +AHw-   200
+
+If this move is activated by another move, the activating move's +AFs-PP+AF0Aew-mechanic:pp+AH0- is used to calculate power.+ACI-
+237,Prevents target from restoring its HP for five turns.,+ACI-For the next five turns, the target may not use any moves that only restore +AFs-HP+AF0Aew-mechanic:hp+AH0-, and move effects that heal the target are disabled.  Moves that steal +AFs-HP+AF0Aew-mechanic:hp+AH0- may still be used, but will only inflict damage and not heal the target.+ACI-
+238,+ACI-Power increases against targets with more HP remaining, up to a maximum of 121 power.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Power directly relates to the target's relative remaining +AFs-HP+AF0Aew-mechanic:hp+AH0-, given by +AGA-1  120 +ACo- current HP / max HP+AGA-, to a maximum of 121.+ACI-
+239,User swaps Attack and Defense.,+ACI-The user's original +AFs-Attack+AF0Aew-mechanic:attack+AH0- and +AFs-Defense+AF0Aew-mechanic:defense+AH0- are swapped.
+
+This effect is passed on by +AFsAXQB7-move:baton+AC0-pass+AH0-.+ACI-
+240,Nullifies target's ability until it leaves battle.,+ACI-The target's ability is disabled as long as it remains on the +AFs-field+AF0Aew-mechanic:field+AH0-.
+
+This effect is passed on by +AFsAXQB7-move:baton+AC0-pass+AH0-.+ACI-
+241,Prevents the target from scoring critical hits for five turns.,+ACI-For five turns, opposing Pok+//0Aw//9AKk-mon cannot score +AFs-critical hits+AF0Aew-mechanic:critical+AC0-hit+AH0-.+ACI-
+242,+ACI-Uses the target's move against it before it attacks, with power increased by half.+ACI-,+ACI-If the target has selected a damaging move this turn, the user will copy that move and use it against the target, with a 50+ACU- increase in power.
+
+If the target moves before the user, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-, nor selected by +AFsAXQB7-move:assist+AH0-, +AFsAXQB7-move:metronome+AH0-, or +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+243,Uses the target's last used move.,+ACI-Uses the last move that was used successfully by any Pok+//0Aw//9AKk-mon, including the user.
+
+This move cannot copy itself, nor +AFsAXQB7-move:roar+AH0- nor +AFsAXQB7-move:whirlwind+AH0-.
+
+This move cannot be copied by +AFsAXQB7-move:mirror+AC0-move+AH0-, nor selected by +AFsAXQB7-move:assist+AH0-, +AFsAXQB7-move:metronome+AH0-, or +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+244,User swaps Attack and Special Attack changes with the target.,User swaps its +AFs-Attack+AF0Aew-mechanic:attack+AH0- and +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- +AFs-stat modifiers+AF0Aew-mechanic:stat+AC0-modifiers+AH0- modifiers with the target.
+245,User swaps Defense and Special Defense changes with the target.,User swaps its +AFs-Defense+AF0Aew-mechanic:defense+AH0- and +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- modifiers with the target.
+246,+ACI-Power increases against targets with more raised stats, up to a maximum of 200.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Power starts at 60 and is increased by 20 for every +AFs-stage+AF0Aew-mechanic:stage+AH0- any of the target's stats has been raised, capping at 200.  +AFs-Accuracy+AF0Aew-mechanic:accuracy+AH0- and +AFs-evasion+AF0Aew-mechanic:evasion+AH0- modifiers do not increase this move's power.+ACI-
+247,Can only be used after all of the user's other moves have been used.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  This move can only be used if each of the user's other moves has been used at least once since the user entered the +AFs-field+AF0Aew-mechanic:field+AH0-.  If this is the user's only move, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.+ACI-
+248,Changes the target's ability to Insomnia.,+ACI-Changes the target's ability to +AFsAXQB7-ability:insomnia+AH0-.
+
+If the target's ability is +AFsAXQB7-ability:truant+AH0- or +AFsAXQB7-ability:multitype+AH0-, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.+ACI-
+249,Only works if the target is about to use a damaging move.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the target has not selected a damaging move this turn, or if the target has already acted this turn, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+This move is not affected by +AFsAXQB7-ability:iron+AC0-fist+AH0-.+ACI-
+250,+ACI-Scatters poisoned spikes, poisoning opposing Pok+//0Aw//9AKk-mon that switch in.+ACI-,+ACI-Scatters poisoned spikes around the opposing +AFs-field+AF0Aew-mechanic:field+AH0-, which +AFs-poison+AF0Aew-mechanic:poison+AH0- opposing Pok+//0Aw//9AKk-mon that enter the +AFs-field+AF0Aew-mechanic:field+AH0-.  A second layer of these spikes may be laid down, in which case Pok+//0Aw//9AKk-mon will be +AFs-badly poison+AF0Aew-mechanic:badly+AC0-poison+AH0-ed instead.  Pok+//0Aw//9AKk-mon immune to either +AFsAXQB7-type:ground+AH0- moves or being +AFs-poison+AF0Aew-mechanic:poison+AH0-ed are immune to this effect.  Pok+//0Aw//9AKk-mon otherwise immune to +AFsAXQB7-type:ground+AH0- moves are affected during +AFsAXQB7-move:gravity+AH0-.
+
+If a +AFsAXQB7-type:poison+AH0- Pok+//0Aw//9AKk-mon not immune to +AFsAXQB7-type:ground+AH0- moves enters a +AFs-field+AF0Aew-mechanic:field+AH0- covered with poisoned spikes, the spikes are removed.
+
++AFsAXQB7-move:rapid+AC0-spin+AH0- will remove this effect from its user's side of the +AFs-field+AF0Aew-mechanic:field+AH0-.  +AFsAXQB7-move:defog+AH0- will remove this effect from its target's side of the +AFs-field+AF0Aew-mechanic:field+AH0-.
+
+This move does not trigger +AFsAXQB7-ability:synchronize+AH0-, unless the Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:synchronize+AH0- was forced to enter the +AFs-field+AF0Aew-mechanic:field+AH0- by another effect such as +AFsAXQB7-move:roar+AH0-.
+
+Pok+//0Aw//9AKk-mon entering the +AFs-field+AF0Aew-mechanic:field+AH0- due to +AFsAXQB7-move:baton+AC0-pass+AH0- are not affected by this effect.+ACI-
+251,User and target swap stat changes.,User swaps its +AFs-stat modifiers+AF0Aew-mechanic:stat+AC0-modifiers+AH0- with the target.
+252,Restores 1/16 of the user's max HP each turn.,+ACI-Restores 1/16 of the user's max +AFs-HP+AF0Aew-mechanic:hp+AH0- at the end of each turn.  If the user leaves the +AFs-field+AF0Aew-mechanic:field+AH0-, this effect ends.
+
+This effect is passed on by +AFsAXQB7-move:baton+AC0-pass+AH0-.+ACI-
+253,User is immune to Ground moves and effects for five turns.,+ACI-For five turns, the user is immune to +AFsAXQB7-type:ground+AH0- moves.
+
+If the user is under the effect of +AFsAXQB7-move:ingrain+AH0- or has +AFsAXQB7-ability:levitate+AH0-, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+This effect is temporarily disabled by and cannot be used during +AFsAXQB7-move:gravity+AH0-.
+
+This effect is passed on by +AFsAXQB7-move:baton+AC0-pass+AH0-.+ACI-
+254,User takes 1/3 the damage inflicted in recoil.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-burn+AF0Aew-mechanic:burn+AH0- the target.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User takes 1/3 the damage it inflicts in recoil.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-burn+AF0Aew-mechanic:burn+AH0- the target.  +AFs-Frozen+AF0Aew-mechanic:frozen+AH0- Pok+//0Aw//9AKk-mon may use this move, in which case they will thaw.+ACI-
+255,User takes 1/4 its max HP in recoil.,+ACI-Inflicts +AFs-typeless+AF0Aew-mechanic:typeless+AH0- +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User takes 1/4 its max +AFs-HP+AF0Aew-mechanic:hp+AH0- in recoil.  Ignores +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- and +AFs-evasion+AF0Aew-mechanic:evasion+AH0- modifiers.
+
+This move is used automatically when a Pok+//0Aw//9AKk-mon cannot use any other move legally, e.g., due to having no +AFs-PP+AF0Aew-mechanic:pp+AH0- remaining or being under the effect of both +AFsAXQB7-move:encore+AH0- and +AFsAXQB7-move:torment+AH0- at the same time.
+
+This move's recoil is not treated as recoil for the purposes of anything that affects recoil, such as the ability +AFsAXQB7-ability:rock+AC0-head+AH0-.  It also is not prevented by +AFsAXQB7-ability:magic+AC0-guard+AH0-.
+
+This move cannot be copied by +AFsAXQB7-move:mimic+AH0-, +AFsAXQB7-move:mirror+AC0-move+AH0-, or +AFsAXQB7-move:sketch+AH0-, nor selected by +AFsAXQB7-move:assist+AH0- or +AFsAXQB7-move:metronome+AH0-, nor forced by +AFsAXQB7-move:encore+AH0-.+ACI-
+256,+ACI-User dives underwater, dodging all attacks, and hits next turn.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User dives underwater for one turn, becoming immune to attack, and hits on the second turn.
+
+During the immune turn, +AFsAXQB7-move:surf+AH0-, and +AFsAXQB7-move:whirlpool+AH0- still hit the user normally, and their power is doubled if appropriate.
+
+The user may be hit during its immune turn if under the effect of +AFsAXQB7-move:lock+AC0-on+AH0-, +AFsAXQB7-move:mind+AC0-reader+AH0-, or +AFsAXQB7-ability:no+AC0-guard+AH0-.
+
+This move cannot be selected by +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+257,+ACI-User digs underground, dodging all attacks, and hits next turn.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User digs underground for one turn, becoming immune to attack, and hits on the second turn.
+
+During the immune turn, +AFsAXQB7-move:earthquake+AH0-, +AFsAXQB7-move:fissure+AH0-, and +AFsAXQB7-move:magnitude+AH0- still hit the user normally, and their power is doubled if appropriate.
+
+The user may be hit during its immune turn if under the effect of +AFsAXQB7-move:lock+AC0-on+AH0-, +AFsAXQB7-move:mind+AC0-reader+AH0-, or +AFsAXQB7-ability:no+AC0-guard+AH0-.
+
+This move cannot be selected by +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+258,Inflicts regular damage and can hit Dive users.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.
+
+If the target is in the first turn of +AFsAXQB7-move:dive+AH0-, this move will hit with double power.+ACI-
+259,Lowers the target's evasion by one stage.  Removes field effects from the enemy field.,+ACI-Lowers the target's +AFs-evasion+AF0Aew-mechanic:evasion+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.  Clears away fog.  Removes the effects of +AFsAXQB7-move:mist+AH0-, +AFsAXQB7-move:light+AC0-screen+AH0-, +AFsAXQB7-move:reflect+AH0-, +AFsAXQB7-move:safeguard+AH0-, +AFsAXQB7-move:spikes+AH0-, +AFsAXQB7-move:stealth+AC0-rock+AH0-, and +AFsAXQB7-move:toxic+AC0-spikes+AH0- from the target's side of the +AFs-field+AF0Aew-mechanic:field+AH0-.
+
+If the target is protected by +AFsAXQB7-move:mist+AH0-, it will prevent the +AFs-evasion+AF0Aew-mechanic:evasion+AH0- change, then be removed by this move.+ACI-
+260,+ACI-For five turns, slower Pok+//0Aw//9AKk-mon will act before faster Pok+//0Aw//9AKk-mon.+ACI-,+ACI-For five turns (including this one), slower Pok+//0Aw//9AKk-mon will act before faster Pok+//0Aw//9AKk-mon.  Move priority is not affected.  Using this move when its effect is already active will end the effect.
+
+Pok+//0Aw//9AKk-mon holding +AFsAXQB7-item:full+AC0-incense+AH0-, +AFsAXQB7-item:lagging+AC0-tail+AH0-, or +AFsAXQB7-item:quick+AC0-claw+AH0- and Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:stall+AH0- ignore this effect.+ACI-
+261,Has a +ACQ-effect+AF8-chance+ACU- chance to freeze the target.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-freeze+AF0Aew-mechanic:freeze+AH0- the target.
+
+During +AFsAXQB7-move:hail+AH0-, this move has 100+ACU- accuracy.  It also has a (100 +AC0- accuracy)+ACU- chance to break through the protection of +AFsAXQB7-move:protect+AH0- and +AFsAXQB7-move:detect+AH0-.+ACI-
+262,Prevents the target from leaving battle and inflicts 1/16 its max HP in damage for 2+AC0-5 turns.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  For the next 2+//0A4v/9AID//QCT-5 turns, the target cannot leave the field and is damaged for 1/16 its max HP at the end of each turn.  The user continues to use other moves during this time.  If the user leaves the +AFs-field+AF0Aew-mechanic:field+AH0-, this effect ends.
+
+Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times.  Averages to 3 hits per use.
+
+If the target is in the first turn of +AFsAXQB7-move:dive+AH0-, this move will hit with double power.+ACI-
+263,User takes 1/3 the damage inflicted in recoil.  Has a +ACQ-effect+AF8-chance+ACU- chance to paralyze the target.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User takes 1/3 the damage it inflicts in recoil.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-paralyze+AF0Aew-mechanic:paralyze+AH0- the target.
+264,+ACI-User bounces high into the air, dodging all attacks, and hits next turn.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User bounces high into the air for one turn, becoming immune to attack, and hits on the second turn.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-paralyze+AF0Aew-mechanic:paralyze+AH0- the target.
+
+During the immune turn, +AFsAXQB7-move:gust+AH0-, +AFsAXQB7-move:hurricane+AH0-, +AFsAXQB7-move:sky+AC0-uppercut+AH0-, +AFsAXQB7-move:smack+AC0-down+AH0-, +AFsAXQB7-move:thunder+AH0-, and +AFsAXQB7-move:twister+AH0- still hit the user normally.  +AFsAXQB7-move:gust+AH0- and +AFsAXQB7-move:twister+AH0- also have double power against the user.
+
+The damage from +AFsAXQB7-move:hail+AH0- and +AFsAXQB7-move:sandstorm+AH0- still applies during the immune turn.
+
+The user may be hit during its immune turn if under the effect of +AFsAXQB7-move:lock+AC0-on+AH0-, +AFsAXQB7-move:mind+AC0-reader+AH0-, or +AFsAXQB7-ability:no+AC0-guard+AH0-.
+
+This move cannot be used while +AFsAXQB7-move:gravity+AH0- is in effect.
+
+This move cannot be selected by +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+266,Lowers the target's Special Attack by two stages if it's the opposite gender.,+ACI-Lowers the target's +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.  If the user and target are the same gender, or either is genderless, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.+ACI-
+267,Causes damage when opposing Pok+//0Aw//9AKk-mon switch in.,+ACI-Spreads sharp rocks around the opposing +AFs-field+AF0Aew-mechanic:field+AH0-, damaging any Pok+//0Aw//9AKk-mon that enters the +AFs-field+AF0Aew-mechanic:field+AH0- for 1/8 its max +AFs-HP+AF0Aew-mechanic:hp+AH0-.  This damage is affected by the entering Pok+//0Aw//9AKk-mon's susceptibility to +AFsAXQB7-type:rock+AH0- moves.
+
++AFsAXQB7-move:rapid+AC0-spin+AH0- removes this effect from its user's side of the +AFs-field+AF0Aew-mechanic:field+AH0-.+ACI-
+268,Has a higher chance to confuse the target when the recorded sound is louder.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has either a 1+ACU-, 11+ACU-, or 31+ACU- chance to +AFs-confuse+AF0Aew-mechanic:confuse+AH0- the target, based on the volume of the recording made for this move+ADs- louder recordings increase the chance of +AFs-confusion+AF0Aew-mechanic:confusion+AH0-.  If the user is not a +AFsAXQB7-pokemon:chatot+AH0-, this move will not cause +AFs-confusion+AF0Aew-mechanic:confusion+AH0-.
+
+This move cannot be copied by +AFsAXQB7-move:mimic+AH0-, +AFsAXQB7-move:mirror+AC0-move+AH0-, or +AFsAXQB7-move:sketch+AH0-, nor selected by +AFsAXQB7-move:assist+AH0-, +AFsAXQB7-move:metronome+AH0-, or +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+269,+ACI-If the user is holding a appropriate plate or drive, the damage inflicted will match it.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the user is holding a plate or a drive, this move's type is the type corresponding to that item.
+
+Note: This effect is technically shared by both +AFsAXQB7-move:techno+AC0-blast+AH0- and +AFsAXQB7-move:judgment+AH0AOw- however, Techno Blast is only affected by drives, and Judgment is only affected by plates.+ACI-
+270,User receives 1/2 the damage inflicted in recoil.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User takes 1/2 the damage it inflicts in recoil.
+271,+ACI-User faints, and its replacement is fully healed.+ACI-,+ACI-User +AFs-faint+AF0Aew-mechanic:faint+AH0-s.  Its replacement's +AFs-HP+AF0Aew-mechanic:hp+AH0- and +AFs-PP+AF0Aew-mechanic:pp+AH0- are fully restored, and any +AFs-major status effect+AF0Aew-mechanic:major+AC0-status+AC0-effect+AH0- is removed.+ACI-
+272,Has a +ACQ-effect+AF8-chance+ACU- chance to lower the target's Special Defense by two stages.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to lower the target's +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.
+273,+ACI-User vanishes, dodging all attacks, and hits next turn.  Hits through Protect and Detect.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User vanishes for one turn, becoming immune to attack, and hits on the second turn.
+
+This move ignores the effects of +AFsAXQB7-move:detect+AH0- and +AFsAXQB7-move:protect+AH0-.
+
+This move cannot be selected by +AFsAXQB7-move:sleep+AC0-talk+AH0-.+ACI-
+274,Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-burn+AF0Aew-mechanic:burn+AH0- the target and a +ACQ-effect+AF8-chance+ACU- chance to make the target flinch.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-burn+AF0Aew-mechanic:burn+AH0- the target and a separate +ACQ-effect+AF8-chance+ACU- chance to make the target +AFs-flinch+AF0Aew-mechanic:flinch+AH0-.
+275,Has a +ACQ-effect+AF8-chance+ACU- chance to freeze the target and a +ACQ-effect+AF8-chance+ACU- chance to make the target flinch.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-freeze+AF0Aew-mechanic:freeze+AH0- the target and a separate +ACQ-effect+AF8-chance+ACU- chance to make the target +AFs-flinch+AF0Aew-mechanic:flinch+AH0-.
+276,Has a +ACQ-effect+AF8-chance+ACU- chance to paralyze the target and a +ACQ-effect+AF8-chance+ACU- chance to make the target flinch.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-paralyze+AF0Aew-mechanic:paralyze+AH0- the target and a separate +ACQ-effect+AF8-chance+ACU- chance to make the target +AFs-flinch+AF0Aew-mechanic:flinch+AH0-.
+277,Has a +ACQ-effect+AF8-chance+ACU- chance to raise the user's Special Attack by one stage.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to raise the user's +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+278,Raises the user's Attack and accuracy by one stage.,Raises the user's +AFs-Attack+AF0Aew-mechanic:attack+AH0- and +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+279,Prevents any multi+AC0-target moves from hitting friendly Pok+//0Aw//9AKk-mon this turn.,+ACI-Moves with multiple targets will not hit friendly Pok+//0Aw//9AKk-mon for the remainder of this turn.  If the user is last to act this turn, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+This move cannot be selected by +AFsAXQB7-move:assist+AH0- or +AFsAXQB7-move:metronome+AH0-.+ACI-
+280,Averages Defense and Special Defense with the target.,Averages the user's unmodified +AFs-Defense+AF0Aew-mechanic:defense+AH0- with the target's unmodified Defense+ADs- the value becomes the unmodified Defense for both Pok+//0Aw//9AKk-mon. Unmodified +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- is averaged the same way.
+281,Averages Attack and Special Attack with the target.,+ACI-Averages the user's unmodified +AFs-Attack+AF0Aew-mechanic:attack+AH0- with the target's unmodified Attack+ADs- the value becomes the unmodified Attack for both Pok+//0Aw//9AKk-mon. Unmodified +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- is averaged the same way.
+
+This effect applies before any other persistent changes to unmodified Attack or Special Attack, such as +AFsAXQB7-ability:flower+AC0-gift+AH0- during +AFsAXQB7-move:sunny+AC0-day+AH0-.+ACI-
+282,All Pok+//0Aw//9AKk-mon's Defense and Special Defense are swapped for 5 turns.,+ACI-For five turns (including this one), every Pok+//0Aw//9AKk-mon's +AFs-Defense+AF0Aew-mechanic:defense+AH0- and +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- are swapped.+ACI-
+283,+ACI-Inflicts damage based on the target's Defense, not Special Defense.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Damage calculation always uses the target's +AFs-Defense+AF0Aew-mechanic:defense+AH0-, regardless of this move's damage class.+ACI-
+284,Inflicts double damage if the target is Poisoned.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the target is +AFs-poisoned+AF0Aew-mechanic:poisoned+AH0-, this move has double power.+ACI-
+285,Raises the user's Speed by two stages and halves the user's weight.,Raises the user's +AFs-Speed+AF0Aew-mechanic:speed+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.  Halves the user's weight+ADs- this effect does not stack.
+286,Moves have 100+ACU- accuracy against the target for three turns.,+ACI-For three turns (including this one), moves used against the target have 100+ACU- +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0-, but the target is immune to +AFsAXQB7-type:ground+AH0- damage.  Accuracy of one+AC0-hit KO moves is exempt from this effect.
+
+This effect is removed by +AFsAXQB7-move:gravity+AH0-.  If Gravity is already in effect, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.+ACI-
+287,Negates held items for five turns.,+ACI-For five turns (including this one), passive effects of held items are ignored, and Pok+//0Aw//9AKk-mon will not use their held items.+ACI-
+288,Removes any immunity to Ground damage.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Removes the target's +AFs-immunity+AF0Aew-mechanic:immune+AH0- to +AFsAXQB7-type:ground+AH0ALQ-type damage.  This effect removes any existing Ground immunity due to +AFsAXQB7-ability:levitate+AH0-, +AFsAXQB7-move:magnet+AC0-rise+AH0-, or +AFsAXQB7-move:telekinesis+AH0-, and causes the target's +AFsAXQB7-type:flying+AH0- type to be ignored when it takes Ground damage.
+
+If the target isn't immune to Ground damage, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+This move can hit Pok+//0Aw//9AKk-mon under the effect of +AFsAXQB7-move:bounce+AH0-, +AFsAXQB7-move:fly+AH0-, or +AFsAXQB7-move:sky+AC0-drop+AH0-, and ends the effect of Bounce or Fly.+ACI-
+289,Always scores a critical hit.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Always scores a +AFs-critical hit+AF0Aew-mechanic:critical+AC0-hit+AH0-.
+290,Deals splash damage to Pok+//0Aw//9AKk-mon next to the target.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If this move successfully hits the target, any Pok+//0Aw//9AKk-mon adjacent to the target are damaged for 1/16 their max +AFs-HP+AF0Aew-mechanic:hp+AH0-.+ACI-
+291,+ACI-Raises the user's Special Attack, Special Defense, and Speed by one stage each.+ACI-,+ACI-Raises the user's +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0-, +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0-, and +AFs-Speed+AF0Aew-mechanic:speed+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0- each.+ACI-
+292,+ACI-Power is higher when the user weighs more than the target, up to a maximum of 120.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  The greater the user's weight compared to the target's, the higher power this move has, to a maximum of 120.
+
+User's weight                    +AHw- Power
++AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQ- +AHw- +AC0ALQAtAC0-:
+Up to 2+//0Aw//9AJc- the target's weight     +AHw-    40
+Up to 3+//0Aw//9AJc- the target's weight     +AHw-    60
+Up to 4+//0Aw//9AJc- the target's weight     +AHw-    80
+Up to 5+//0Aw//9AJc- the target's weight     +AHw-   100
+More than 5+//0Aw//9AJc- the target's weight +AHw-   120
++ACI-
+293,Hits any Pok+//0Aw//9AKk-mon that shares a type with the user.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Only Pok+//0Aw//9AKk-mon that share a type with the user will take damage from this move.
+294,+ACI-Power is higher when the user has greater Speed than the target, up to a maximum of 150.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  The greater the user's +AFs-Speed+AF0Aew-mechanic:speed+AH0- compared to the target's, the higher power this move has, to a maximum of 150.
+
+User's Speed                     +AHw- Power
++AC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQ- +AHw- +AC0ALQAtAC0-:
+Up to 2+//0Aw//9AJc- the target's Speed      +AHw-    60
+Up to 3+//0Aw//9AJc- the target's Speed      +AHw-    80
+Up to 4+//0Aw//9AJc- the target's Speed      +AHw-   120
+More than 4+//0Aw//9AJc- the target's Speed  +AHw-   150
++ACI-
+295,Changes the target's type to Water.,+ACI-Changes the target to pure +AFsAXQB7-type:water+AH0ALQ-type until it leaves the field.  If the target has +AFsAXQB7-ability:multitype+AH0-, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.+ACI-
+296,Inflicts regular damage.  Raises the user's Speed by one stage.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Raises the user's +AFs-Speed+AF0Aew-mechanic:speed+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+297,Lowers the target's Special Defense by two stages.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Lowers the target's +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.
+298,Calculates damage with the target's attacking stat.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Damage is calculated using the target's attacking stat rather than the user's.
+299,Changes the target's ability to Simple.,Changes the target's ability to +AFsAXQB7-ability:simple+AH0-.
+300,Copies the user's ability onto the target.,Changes the target's ability to match the user's.  This effect ends when the target leaves battle.
+301,Makes the target act next this turn.,+ACI-The target will act next this turn, regardless of +AFs-Speed+AF0Aew-mechanic:speed+AH0- or move priority.
+If the target has already acted this turn, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.+ACI-
+302,Has double power if it's used more than once per turn.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If +AFsAXQB7-move:round+AH0- has already been used this turn, this move's power is doubled.  After this move is used, any other Pok+//0Aw//9AKk-mon using it this turn will immediately do so (in the order they would otherwise act), regardless of +AFs-Speed+AF0Aew-mechanic:speed+AH0- or priority.  Pok+//0Aw//9AKk-mon using other moves will then continue to act as usual.+ACI-
+303,+ACI-Power increases by 100+ACU- for each consecutive use by any friendly Pok+//0Aw//9AKk-mon, to a maximum of 200.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If any friendly Pok+//0Aw//9AKk-mon used this move earlier this turn or on the previous turn, that use's power is added to this move's power, to a maximum of 200.+ACI-
+304,Ignores the target's stat modifiers.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Damage calculation ignores the target's +AFs-stat modifiers+AF0Aew-mechanic:stat+AC0-modifiers+AH0-, including +AFs-evasion+AF0Aew-mechanic:evasion+AH0-.+ACI-
+305,Removes all of the target's stat modifiers.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  All of the target's +AFs-stat modifiers+AF0Aew-mechanic:stat+AC0-modifiers+AH0- are reset to zero.
+306,+ACI-Power is higher the more the user's stats have been raised, to a maximum of 31+//0Aw//9AJc-.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Power is increased by 100+ACU- its original value for every +AFs-stage+AF0Aew-mechanic:stage+AH0- any of the user's stats have been raised.  +AFs-Accuracy+AF0Aew-mechanic:accuracy+AH0-, +AFs-evasion+AF0Aew-mechanic:evasion+AH0-, and lowered stats do not affect this move's power.  For a Pok+//0Aw//9AKk-mon with all five stats modified to +//0-, this move's power is 31+//0Aw//9AJc-.+ACI-
+307,Prevents any priority moves from hitting friendly Pok+//0Aw//9AKk-mon this turn.,+ACI-Moves with priority greater than 0 will not hit friendly Pok+//0Aw//9AKk-mon for the remainder of this turn.  If the user is last to act this turn, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.
+
+This move cannot be selected by +AFsAXQB7-move:assist+AH0- or +AFsAXQB7-move:metronome+AH0-.+ACI-
+308,User switches places with the friendly Pok+//0Aw//9AKk-mon opposite it.,+ACI-User switches position on the field with the friendly Pok+//0Aw//9AKk-mon opposite it.  If the user is in the middle position in a triple battle, or there are no other friendly Pok+//0Aw//9AKk-mon, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.+ACI-
+309,+ACI-Raises user's Attack, Special Attack, and Speed by two stages.  Lower user's Defense and Special Defense by one stage.+ACI-,+ACI-Raises the user's +AFs-Attack+AF0Aew-mechanic:attack+AH0-, +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0-, and +AFs-Speed+AF0Aew-mechanic:speed+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0- each.  Lowers the user's +AFs-Defense+AF0Aew-mechanic:defense+AH0- and +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0- by one +AFsAXQB7-mechanic:stage+AH0- each.+ACI-
+310,Heals the target for half its max HP.,Heals the target for half its max +AFs-HP+AF0Aew-mechanic:hp+AH0-.
+311,Has double power if the target has a major status ailment.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the target has a +AFs-major status ailment+AF0Aew-mechanic:major+AC0-status+AC0-ailment+AH0-, this move has double power.+ACI-
+312,+ACI-Carries the target high into the air, dodging all attacks against either, and drops it next turn.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User carries the target high into the air for one turn, during which no moves will hit either Pok+//0Aw//9AKk-mon and neither can act.  On the following turn, the user drops the target, inflicting damage and ending the effect.
+
+If the target is +AFsAXQB7-type:flying+AH0ALQ-type, this move will function as normal but inflict no damage.
+
++AFsAXQB7-move:gust+AH0-, +AFsAXQB7-move:hurricane+AH0-, +AFsAXQB7-move:sky+AC0-uppercut+AH0-, +AFsAXQB7-move:smack+AC0-down+AH0-, +AFsAXQB7-move:thunder+AH0-, +AFsAXQB7-move:twister+AH0-, and +AFsAXQB7-move:whirlwind+AH0- can hit both the user and the target during this effect.  +AFsAXQB7-move:gust+AH0- and +AFsAXQB7-move:twister+AH0- will additionally have double power.
+
+The damage from +AFsAXQB7-move:hail+AH0- and +AFsAXQB7-move:sandstorm+AH0- still applies during this effect.
+
+Either Pok+//0Aw//9AKk-mon may be hit during this effect if also under the effect of +AFsAXQB7-move:lock+AC0-on+AH0-, +AFsAXQB7-move:mind+AC0-reader+AH0-, or +AFsAXQB7-ability:no+AC0-guard+AH0-.
+
+This move cannot be used while +AFsAXQB7-move:gravity+AH0- is in effect.
+
+This move cannot be selected by +AFsAXQB7-move:sleep+AC0-talk+AH0-.
+
++ACo-Bug+ACo-: If +AFsAXQB7-move:gravity+AH0- is used during a double or triple battle while this move is in effect, this move is not correctly canceled on the target, and it remains high in the air indefinitely.  As this move prevents the target from acting, the only way to subsequently remove it from the field is to faint it.+ACI-
+313,Raises the user's Attack by one stage and its Speed by two stages.,Raises the user's +AFs-Attack+AF0Aew-mechanic:attack+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0- and its +AFs-Speed+AF0Aew-mechanic:speed+AH0- by two stages.
+314,Ends wild battles.  Forces trainers to switch Pok+//0Aw//9AKk-mon.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-, then +AFs-switches+AF0Aew-mechanic:switch+AC0-out+AH0- the target out for another of its trainer's Pok+//0Aw//9AKk-mon, selected at random.
+
+If the target is under the effect of +AFsAXQB7-move:ingrain+AH0- or +AFsAXQB7-ability:suction+AC0-cups+AH0-, or it has a +AFsAXQB7-move:substitute+AH0-, or its Trainer has no more usable Pok+//0Aw//9AKk-mon, it will not be switched out.  If the target is a wild Pok+//0Aw//9AKk-mon, the battle ends instead.+ACI-
+315,Destroys the target's held berry.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the target is +AFs-holding+AF0Aew-mechanic:held+AC0-item+AH0- a +AFs-berry+AF0Aew-mechanic:berry+AH0-, it's destroyed and cannot be used in response to this move.+ACI-
+316,Makes the target act last this turn.,+ACI-Forces the target to act last this turn, regardless of +AFs-Speed+AF0Aew-mechanic:speed+AH0- or move +AFs-priority+AF0Aew-mechanic:priority+AH0-.  If the target has already acted this turn, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.+ACI-
+317,Raises the user's Attack and Special Attack by one stage.,+ACI-Raises the user's +AFs-Attack+AF0Aew-mechanic:attack+AH0- and +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0- each.  During +AFsAXQB7-move:sunny+AC0-day+AH0-, raises both stats by two stages.+ACI-
+318,Has double power if the user has no held item.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the user has no +AFs-held item+AF0Aew-mechanic:held+AC0-item+AH0-, this move has double power.+ACI-
+319,User becomes the target's type.,User's type changes to match the target's.
+320,Has double power if a friendly Pok+//0Aw//9AKk-mon fainted last turn.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If a friendly Pok+//0Aw//9AKk-mon fainted on the previous turn, this move has double power.+ACI-
+321,Inflicts damage equal to the user's remaining HP.  User faints.,Inflicts damage equal to the user's remaining +AFs-HP+AF0Aew-mechanic:hp+AH0-.  User faints.
+322,Raises the user's Special Attack by three stages.,Raises the user's +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- by three +AFs-stages+AF0Aew-mechanic:stage+AH0-.
+323,+ACI-Raises the user's Attack, Defense, and accuracy by one stage each.+ACI-,+ACI-Raises the user's +AFs-Attack+AF0Aew-mechanic:attack+AH0-, +AFs-Defense+AF0Aew-mechanic:defense+AH0-, and +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0- each.+ACI-
+324,Gives the user's held item to the target.,+ACI-Transfers the user's +AFs-held item+AF0Aew-mechanic:held+AC0-item+AH0- to the target.  If the user has no held item, or the target already has a held item, this move will +AFs-fail+AF0Aew-mechanic:fail+AH0-.+ACI-
+325,+ACI-With +AFs-Grass Pledge+AF0Aew-move:grass+AC0-pledge+AH0-, halves opposing Pok+//0Aw//9AKk-mon's Speed for four turns.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If a friendly Pok+//0Aw//9AKk-mon used +AFsAXQB7-move:grass+AC0-pledge+AH0- earlier this turn, all opposing Pok+//0Aw//9AKk-mon have halved +AFs-Speed+AF0Aew-mechanic:speed+AH0- for four turns (including this one).+ACI-
+326,+ACI-With +AFs-Water Pledge+AF0Aew-move:water+AC0-pledge+AH0-, doubles the effect chance of friendly Pok+//0Aw//9AKk-mon's moves for four turns.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If a friendly Pok+//0Aw//9AKk-mon used +AFsAXQB7-move:water+AC0-pledge+AH0- earlier this turn, moves used by any friendly Pok+//0Aw//9AKk-mon have doubled effect chance for four turns (including this one).+ACI-
+327,+ACI-With +AFs-Fire Pledge+AF0Aew-move:fire+AC0-pledge+AH0-, damages opposing Pok+//0Aw//9AKk-mon for 1/8 their max HP every turn for four turns.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If a friendly Pok+//0Aw//9AKk-mon used +AFsAXQB7-move:fire+AC0-pledge+AH0- earlier this turn, all opposing Pok+//0Aw//9AKk-mon will take 1/8 their max +AFs-HP+AF0Aew-mechanic:hp+AH0- in damage at the end of every turn for four turns (including this one).+ACI-
+328,Raises the user's Attack and Special Attack by one stage each.,Raises the user's +AFs-Attack+AF0Aew-mechanic:attack+AH0- and +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0- each.
+329,Raises the user's Defense by three stages.,Raises the user's +AFs-Defense+AF0Aew-mechanic:defense+AH0- by three +AFs-stages+AF0Aew-mechanic:stage+AH0-.
+330,Has a +ACQ-effect+AF8-chance+ACU- chance to put the target to sleep.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to put the target to +AFs-sleep+AF0Aew-mechanic:sleep+AH0-.
+If the user is a +AFsAXQB7-pokemon:meloetta+AH0-, it will toggle between Aria and Pirouette Forme.+ACI-
+331,Lowers the target's Speed by one stage.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Lowers the target's +AFs-Speed+AF0Aew-mechanic:speed+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+332,Requires a turn to charge before attacking.  Has a +ACQ-effect+AF8-chance+ACU- chance to paralyze the target.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-paralyze+AF0Aew-mechanic:paralysis+AH0- the target.  User charges for one turn before attacking.
+333,Requires a turn to charge before attacking.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-burn+AF0Aew-mechanic:burn+AH0- the target.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-burn+AF0Aew-mechanic:burn+AH0- the target.  User charges for one turn before attacking.
+334,Has a +ACQ-effect+AF8-chance+ACU- chance to confuse the target.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-confuse+AF0Aew-mechanic:confuse+AH0- the target.
+
+This move can hit Pok+//0Aw//9AKk-mon under the effect of +AFsAXQB7-move:bounce+AH0-, +AFsAXQB7-move:fly+AH0-, or +AFsAXQB7-move:sky+AC0-drop+AH0-.
+
+During +AFsAXQB7-move:rain+AC0-dance+AH0-, this move has 100+ACU- accuracy.  During +AFsAXQB7-move:sunny+AC0-day+AH0-, this move has 50+ACU- accuracy.+ACI-
+335,+ACI-Lowers the user's Defense, Special Defense, and Speed by one stage each.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Lowers the user's +AFs-Defense+AF0Aew-mechanic:defense+AH0-, +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0-, and +AFs-Speed+AF0Aew-mechanic:speed+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0- each.+ACI-
+336,+ACI-With +AFs-Fusion Bolt+AF0Aew-move:fusion+AC0-bolt+AH0-, inflicts double damage.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If a friendly Pok+//0Aw//9AKk-mon used +AFsAXQB7-move:fusion+AC0-bolt+AH0- earlier this turn, this move has double power.+ACI-
+337,+ACI-With +AFs-Fusion Flare+AF0Aew-move:fusion+AC0-flare+AH0-, inflicts double damage.+ACI-,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If a friendly Pok+//0Aw//9AKk-mon used +AFsAXQB7-move:fusion+AC0-flare+AH0- earlier this turn, this move has double power.+ACI-
+338,Deals both +AFsAXQB7-type:fighting+AH0- and +AFsAXQB7-type:flying+AH0ALQ-type damage.,+ACI-Inflicts regular damage.  For the purposes of type effectiveness, this move is both +AFsAXQB7-type:fighting+AH0ALQ- and +AFsAXQB7-type:flying+AH0ALQ-type: its final effectiveness is determined by multiplying the effectiveness of each type against each of the target's types.
+
+For all other purposes, this move is pure Fighting+AC0-type.  If this move's type is changed, its Fighting typing is overwritten, and its secondary type remains Flying.
+
+If the target has used +AFsAXQB7-move:minimize+AH0- since entering battle, this move has double power and will never miss.+ACI-
+339,Can only be used after the user has eaten a berry.,+ACI-Inflicts regular damage.  Can only be used if the user has eaten a berry since the beginning of the battle.
+
+After the user eats a berry, it may use this move any number of times until the end of the battle, even if it switches out.  Eating a held berry, eating a berry via +AFsAXQB7-move:bug+AC0-bite+AH0- or +AFsAXQB7-move:pluck+AH0-, or being the target of a +AFs-Flung+AF0Aew-move:fling+AH0- berry will enable this move.  Feeding a Pok+//0Aw//9AKk-mon a berry from the bag or using +AFsAXQB7-move:natural+AC0-gift+AH0- will not.
+
+If the trainer chooses this move when it cannot be used, the choice is rejected outright and the trainer must choose another move.+ACI-
+340,Raises the Attack and Special Attack of all +AFsAXQB7-type:grass+AH0- Pok+//0Aw//9AKk-mon in battle.,Raises the Attack and Special Attack of all +AFsAXQB7-type:grass+AH0- Pok+//0Aw//9AKk-mon in battle.
+341,+ACI-Covers the opposing field, lowering opponents' Speed by one stage upon switching in.+ACI-,+ACI-Shoots a web over the opponents' side of the field, which lowers the Speed of any opposing Pok+//0Aw//9AKk-mon that enters the field by one stage.
+
+Pok+//0Aw//9AKk-mon in the air, such as +AFsAXQB7-type:flying+AH0ALQ-types and those with +AFsAXQB7-ability:levitate+AH0-, are unaffected.  +AFsAXQB7-move:rapid+AC0-spin+AH0- removes Sticky Web from the user's side of the field+ADs- +AFsAXQB7-move:defog+AH0- removes it from both sides.+ACI-
+342,Raises the user's Attack by two stages if it KOs the target.,Inflicts regular damage.  Raises the user's Attack by two stages if it KOs the target.
+343,Adds +AFsAXQB7-type:ghost+AH0- to the target's types.,Adds +AFsAXQB7-type:ghost+AH0- to the target's types.
+344,Lowers the target's Attack and Special Attack by one stage.,Lowers the target's Attack and Special Attack by one stage.
+345,Changes all +AFsAXQB7-type:normal+AH0- moves to +AFsAXQB7-type:electric+AH0- moves for the rest of the turn.,Changes all Pok+//0Aw//9AKk-mon's +AFsAXQB7-type:normal+AH0- moves to +AFsAXQB7-type:electric+AH0- moves for the rest of the turn.
+346,Heals the user for half the total damage dealt to all targets.,Heals the user for half the total damage dealt to all targets.
+347,Lowers all targets' Attack and Special Attack by one stage.  Makes the user switch out.,Lowers all targets' Attack and Special Attack by one stage.  Makes the user switch out.
+348,Inverts the target's stat modifiers.,Inverts the target's stat modifiers.
+349,Drains 75+ACU- of the damage inflicted to heal the user.,Deals regular damage.  Drains 75+ACU- of the damage inflicted to heal the user.
+350,Protects all friendly Pok+//0Aw//9AKk-mon from non+AC0-damaging moves.,+ACI-Protects all friendly Pok+//0Aw//9AKk-mon from non+AC0-damaging moves for the rest of the turn.
+
+Unlike other blocking moves, this move may be used consecutively without its chance of success falling.+ACI-
+351,Raises the Defense of all +AFsAXQB7-type:grass+AH0- Pok+//0Aw//9AKk-mon in battle.,Raises the Defense of all +AFsAXQB7-type:grass+AH0- Pok+//0Aw//9AKk-mon in battle.
+352,+ACI-For five turns, heals all Pok+//0Aw//9AKk-mon on the ground for 1/16 max HP each turn and strengthens their +AFsAXQB7-type:grass+AH0- moves to 1.5+//0Aw//9AJc- their power.+ACI-,+ACI-For five turns, heals all Pok+//0Aw//9AKk-mon on the ground for 1/16 their max HP each turn and strengthens their +AFsAXQB7-type:grass+AH0- moves to 1.5+//0Aw//9AJc- their power.
+
+Changes +AFsAXQB7-move:nature+AC0-power+AH0- to +AFsAXQB7-move:energy+AC0-ball+AH0-.+ACI-
+353,+ACI-For five turns, protects all Pok+//0Aw//9AKk-mon on the ground from major status ailments and confusion, and halves the power of incoming +AFsAXQB7-type:dragon+AH0- moves.+ACI-,+ACI-For five turns, protects all Pok+//0Aw//9AKk-mon on the ground from major status ailments and confusion and weakens +AFsAXQB7-type:dragon+AH0- moves used against them to 0.5+//0Aw//9AJc- their power.
+
+Changes +AFsAXQB7-move:nature+AC0-power+AH0- to +AFsAXQB7-move:moonblast+AH0-.+ACI-
+354,Changes the target's move's type to +AFsAXQB7-type:electric+AH0- if it hasn't moved yet this turn.,Changes the target's move's type to +AFsAXQB7-type:electric+AH0- if it hasn't moved yet this turn.
+355,Prevents all Pok+//0Aw//9AKk-mon from fleeing or switching out during the next turn.,Prevents all Pok+//0Aw//9AKk-mon from fleeing or switching out during the next turn.
+356,Blocks damaging attacks and lowers attacking Pok+//0Aw//9AKk-mon's Attack by two stages on contact.  Switches Aegislash to Shield Forme.,Blocks damaging attacks and lowers attacking Pok+//0Aw//9AKk-mon's Attack by two stages on contact.  Switches Aegislash to Shield Forme.
+357,Lowers the target's Attack by one stage.,Lowers the target's +AFs-Attack+AF0Aew-mechanic:attack+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+358,Lowers the target's Special Attack by one stage.,Lowers the target's Special Attack by one stage.
+359,Has a +ACQ-effect+AF8-chance+ACU- chance to raise the user's Defense by two stages for each target hit.,Inflicts regular damage.  Has a +ACQ-effect+AF8-chance+ACU- chance to raise the user's Defense by two stages for each target hit.
+360,Ignores and destroys protection effects.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Bypasses and removes any protection effect on the target.
+361,Hits 2+//0A4v/9AID//QCT-5 times.,Inflicts regular damage.  Hits 2+//0A4v/9AID//QCT-5 times.
+362,Blocks damaging attacks and damages attacking Pok+//0Aw//9AKk-mon for 1/8 their max HP.,Blocks damaging attacks and damages attacking Pok+//0Aw//9AKk-mon for 1/8 their max HP.
+363,Raises a selected ally's Special Defense by one stage.,Raises a selected ally's Special Defense by one stage.
+364,+ACI-Lowers the target's Attack, Special Attack, and Speed by one stage if it is poisoned.+ACI-,+ACI-Lowers the target's Attack, Special Attack, and Speed by one stage if it is poisoned.+ACI-
+365,Lowers the target's Attack by one stage.,Lowers the target's Attack by one stage.
+366,+ACI-Takes one turn to charge, then raises the user's Special Attack, Special Defense, and Speed by two stages.+ACI-,+ACI-Takes one turn to charge, then raises the user's Special Attack, Special Defense, and Speed by two stages.+ACI-
+367,Raises the Defense and Special Defense of all friendly Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:plus+AH0- or +AFsAXQB7-ability:minus+AH0- by one stage.,Raises the Defense and Special Defense of all friendly Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:plus+AH0- or +AFsAXQB7-ability:minus+AH0- by one stage.
+368,Doubles prize money.,+ACI-Doubles prize money.
+
+Stacks with a held item.  Only works once per battle.+ACI-
+369,+ACI-For five turns, prevents all Pok+//0Aw//9AKk-mon on the ground from sleeping and strengthens their +AFsAXQB7-type:electric+AH0- moves to 1.5+//0Aw//9AJc- their power.+ACI-,+ACI-For five turns, prevents all Pok+//0Aw//9AKk-mon on the ground from sleeping and strengthens their +AFsAXQB7-type:electric+AH0- moves to 1.5+//0Aw//9AJc- their power.
+
+Changes +AFsAXQB7-move:nature+AC0-power+AH0- to +AFsAXQB7-move:thunderbolt+AH0-.+ACI-
+370,Does nothing.,Does nothing.
+371,Does nothing.,Does nothing.
+372,Has a +ACQ-effect+AF8-chance+ACU- chance to paralyze the target.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Has a +ACQ-effect+AF8-chance+ACU- chance to +AFs-paralyze+AF0Aew-mechanic:paralysis+AH0- the target.
+373,+ACI-Grounds the target, and hits even Flying+AC0-type or levitating Pok+//0Aw//9AKk-mon.+ACI-,Inflicts regular damage.  Grounds the target until it leaves battle.  Ignores levitation effects and the immunity of +AFsAXQB7-type:flying+AH0ALQ-type Pok+//0Aw//9AKk-mon.
+374,Prevents the target from leaving battle.,Inflicts regular damage.  Traps the target.  
+375,Raises the user's Attack by one stage after inflicting damage.,Inflicts regular damage.  Raises the user's Attack by one stage.
+376,Adds +AFsAXQB7-type:grass+AH0- to the target's types.,Adds +AFsAXQB7-type:grass+AH0- to the target's types.
+377,Protects all friendly Pok+//0Aw//9AKk-mon from damaging moves.  Only works on the first turn after the user is sent out.,Protects all friendly Pok+//0Aw//9AKk-mon from damaging moves.  Only works on the first turn after the user is sent out.
+378,+ACI-Explodes if the target uses a +AFsAXQB7-type:fire+AH0- move this turn, damaging it for 1/4 its max HP and preventing the move.+ACI-,+ACI-Explodes if the target uses a +AFsAXQB7-type:fire+AH0- move this turn, damaging it for 1/4 its max HP and preventing the move.+ACI-
+379,Inflicts regular damage.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.
+380,Super+AC0-effective against +AFsAXQB7-type:water+AH0-.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  This move is super+AC0-effective against the +AFsAXQB7-type:water+AH0- type.
+
+The target's other type will affect damage as usual.  If this move's type is changed, it remains super+AC0-effective against Water regardless of its type.+ACI-
+381,Never misses.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Ignores +AFs-accuracy+AF0Aew-mechanic:accuracy+AH0- and +AFs-evasion+AF0Aew-mechanic:evasion+AH0-.
+382,+ACI-Heals the user for +//0Awv/9AL0- its max HP, or +//0A4v/9AIX//QCU- during a sandstorm.+ACI-,+ACI-Heals the user for +//0Awv/9AL0- its max HP.  During a +AFsAXQB7-move:sandstorm+AH0-, the healing is increased to +//0A4v/9AIX//QCU-.+ACI-
+383,Can only be used as the first move after the user enters battle.,Inflicts regular damage. Can only be used on the user's first turn after entering the field.
+384,Grants the user protection for the rest of the turn and poisons any Pok+//0Aw//9AKk-mon that tries to use a contact move on it.,+ACI-Grants the user protection for the rest of the turn.  If a Pok+//0Aw//9AKk-mon attempts to use a move that makes contact with the user, that Pok+//0Aw//9AKk-mon will be poisoned.  This move's chance of success halves every time it's used consecutively with any other protection move.+ACI-
+385,Traps the target.,Inflicts regular damage.  Traps the target.
+386,Cures the target of burns.,+ACI-Inflicts regular damage.  If the target has a burn and takes damage from this move, its burn is healed.+ACI-
+387,+ACI-Heals the target for +//0Awv/9AL0- its max HP, or +//0A4v/9AIX//QCU- on Grassy Terrain.+ACI-,+ACI-Heals the target for +//0Awv/9AL0- its max HP.  If +AFsAXQB7-move:grassy+AC0-terrain+AH0- is in effect, heals for +//0A4v/9AIX//QCU- instead.+ACI-
+388,Heals the user by the target's current Attack stat and lowers the target's Attack by one stage.,+ACI-Lowers the target's Attack by one stage.  Heals the user by the target's current Attack, including modifiers, but not including this move's Attack+AC0-lowering effect.
+
+If the target's Attack is already at +AC0-6, this move will fail.  In any other situation that would prevent a stat modification, the healing will still succeed.+ACI-
+389,Forces the target's opponents to aim at the target for the rest of the turn.,+ACI-For the duration of the turn, if the target is also a valid target for a move used by one of its opponents, that move will target it instead.+ACI-
+390,Poisons the target and lowers its Speed by one stage.,Poisons the target and lowers its Speed by one stage.
+391,Guarantees a critical hit with the user's next move.,The user's next move will result in a +AFs-critical hit+AF0Aew-mechanic:critical+AC0-hit+AH0-.
+392,Raises the Attack and Special Attack of all friendly Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:plus+AH0- or +AFsAXQB7-ability:minus+AH0- by one stage.,Raises the Attack and Special Attack of all friendly Pok+//0Aw//9AKk-mon with +AFsAXQB7-ability:plus+AH0- or +AFsAXQB7-ability:minus+AH0- by one stage.
+393,Prevents the target from using sound+AC0-based moves for two turns.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Silences the target for two turns, preventing it from using any sound+AC0-based moves.+ACI-
+394,+ACI-Damages opponents, but heals allies for 50+ACU- of their max HP.+ACI-,+ACI-If the target is an opponent, inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the target is an ally, heals the target for 50+ACU- of its max HP.+ACI-
+395,Protects Pok+//0Aw//9AKk-mon on the ground from priority moves and increases the power of their  Psychic moves by 50+ACU-.,+ACI-Changes the terrain to Psychic Terrain for 5 turns.  Overrides +AFsAXQB7-move:electric+AC0-terrain+AH0-, +AFsAXQB7-move:grassy+AC0-terrain+AH0-, and +AFsAXQB7-move:misty+AC0-terrain+AH0-.
+
+All Pok+//0Aw//9AKk-mon on the ground are immune to moves with priority greater than 0.  (Moves that target the field rather than individual Pok+//0Aw//9AKk-mon, such as +AFsAXQB7-move:spikes+AH0-, are not affected.)  Additionally, when a Pok+//0Aw//9AKk-mon on the ground uses a +AFsAXQB7-type:psychic+AH0ALQ-type move, that move's power is increased to 1.5+//0Aw//9AJc-.
+
+If a Pok+//0Aw//9AKk-mon is holding a Terrain Extender when creating Psychic Terrain (by any means), the effect lasts for 8 turns instead of 5.+ACI-
+396,Lowers the target's Attack by one stage after inflicting damage.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Lowers the target's +AFs-Attack+AF0Aew-mechanic:attack+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+397,Lowers the target's Defense by one stage after inflicting damage.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Lowers the target's +AFs-Defense+AF0Aew-mechanic:defense+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+398,Removes the user's +AFsAXQB7-type:fire+AH0- type after inflicting damage.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Removes the user's +AFsAXQB7-type:fire+AH0- type after damage calculation.  If the user is not +AFsAXQB7-type:fire+AH0ALQ-type, this move will fail.+ACI-
+399,Exchanges the user's Speed with the target's.,Exchanges the original +AFs-Speed+AF0Aew-mechanic:speed+AH0- stats of the user and target.
+400,Cures the target of a major status ailment and heals the user for 50+ACU- of its max HP.,+ACI-Cures the target of its major status ailment and heals the user for 50+ACU- of its max HP.  If the target has no major status ailment, this move will fail.+ACI-
+401,Has the same type as the user.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  This move's type matches the user's first type, if any+ADs- otherwise, it's typeless.+ACI-
+402,Nullifies the target's ability if it moves earlier.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the target has already moved this turn, its ability is nullified.+ACI-
+403,Forces the target to repeat its last used move.,+ACI-The target immediately uses its most recently+AC0-used move.  This is independent of the target's normal action for the turn (i.e., it may end up moving twice), but otherwise functions as usual, including deduction of PP.  This effect works for disabled moves and ignores +AFsAXQB7-move:torment+AH0-.+ACI-
+404,Inflicts a burn on any Pok+//0Aw//9AKk-mon that makes contact before the attack.,+ACI-Begins charging at the start of the turn, then attacks as normal.  Any Pok+//0Aw//9AKk-mon that makes contact with the user while charging is +AFs-burned+AF0Aew-mechanic:burns+AH0-.  The charging is not affected by accuracy, sleep, paralysis, or any other effect that would interfere with a move.+ACI-
+405,Lowers the user's Defense by one stage after inflicting damage.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Lowers the user's +AFs-Defense+AF0Aew-mechanic:defense+AH0- by one +AFs-stage+AF0Aew-mechanic:stage+AH0-.
+406,Inflicts regular damage with no additional effect.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.
+407,+ACI-Reduces damage five turns, but must be used during hail.+ACI-,+ACI-Places the Aurora Veil effect on the user's side of the field for the next 5 turns.  If the weather is not +AFsAXQB7-move:hail+AH0-, or the weather is disabled by the effects of +AFsAXQB7-ability:cloud+AC0-nine+AH0- or +AFsAXQB7-ability:air+AC0-lock+AH0-, this move will fail.
+
+Any +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0- dealt to an affected Pok+//0Aw//9AKk-mon is reduced by +//0Awv/9AL0-.  (If there are multiple Pok+//0Aw//9AKk-mon on the affected field, the reduction is +//0A4v/9AIX//QCT-.)+ACI-
+408,Only inflicts damage if the user was hit by a physical move this turn.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  If the user was not yet hit by an opponent's physical move this turn, this move will fail.+ACI-
+409,Has double power if the user's last move failed.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Power is doubled if the user's last move failed for any reason (i.e., produced the message +ACIAIg-But it failed+ACEAIgAi-) or was ineffective due to types.+ACI-
+410,+ACI-Steals the target's stat increases, then inflicts damage.+ACI-,+ACI-Steals the target's stat increases, then inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Will not steal stat increases that would put any of the user's stats at more than +//0AOw- any excess is left on the target.  Stolen increases are affected by abilities as normal.+ACI-
+411,Cannot be disrupted by abilities.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  Other Pok+//0Aw//9AKk-mon's abilities cannot activate in response to this move.  In particular, it hits through +AFsAXQB7-ability:disguise+AH0-+ACI-
+412,Lowers the target's Attack and Special Attack by one stage.,Lowers the target's +AFs-Attack+AF0Aew-mechanic:attack+AH0- and +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0- by one stage each.
+413,Damages the target for 75+ACU- of its remaining HP.,Inflicts direct damage equal to +//0Awv/9AL4- of the target's remaining HP.
+414,Raises all of the user's stats by two stages.,+ACI-Raises the user's +AFs-Attack+AF0Aew-mechanic:attack+AH0-, +AFs-Defense+AF0Aew-mechanic:defense+AH0-, +AFs-Special Attack+AF0Aew-mechanic:special+AC0-attack+AH0-, +AFs-Special Defense+AF0Aew-mechanic:special+AC0-defense+AH0-, and +AFs-Speed+AF0Aew-mechanic:speed+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0- each.+ACI-
+415,Changes the terrain to Psychic Terrain after inflicting damage.,+ACI-Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-, then (if successful) changes the terrain to +AFsAXQB7-move:psychic+AC0-terrain+AH0-.+ACI-
+416,XXX new effect for light+AC0-that+AC0-burns+AC0-the+AC0-sky,XXX new effect for light+AC0-that+AC0-burns+AC0-the+AC0-sky
+417,XXX new effect for lets+AC0-snuggle+AC0-forever,XXX new effect for lets+AC0-snuggle+AC0-forever
+418,XXX new effect for splintered+AC0-stormshards,XXX new effect for splintered+AC0-stormshards
+419,XXX new effect for clangorous+AC0-soulblaze,XXX new effect for clangorous+AC0-soulblaze
+420,XXX new effect for mind+AC0-blown,XXX new effect for mind+AC0-blown
+10001,Has an increased chance for a critical hit in Hyper Mode.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User's +AFs-critical hit+AF0Aew-mechanic:critical+AC0-hit+AH0- rate is one level higher when using this move while in +AFs-hyper mode+AF0Aew-mechanic:hyper+AC0-mode+AH0-.
+10002,User receives 1/2 its HP in recoil.,Inflicts +AFs-regular damage+AF0Aew-mechanic:regular+AC0-damage+AH0-.  User takes 1/2 of its current +AFs-HP+AF0Aew-mechanic:hp+AH0- in recoil.
+10003,Halves HP of all Pok+//0Aw//9AKk-mon on the field.  Must recharge,+ACI-Halves +AFs-HP+AF0Aew-mechanic:hp+AH0- of all Pok+//0Aw//9AKk-mon on the field.  User loses its next turn to +ACIAIg-recharge+ACIAIg-, and cannot attack or +AFs-switch+AF0Aew-mechanic:switch+AH0- out during that turn.+ACI-
+10004,Lowers the target's evasion by two stages.,Lowers the target's +AFs-evasion+AF0Aew-mechanic:evasion+AH0- by two +AFs-stages+AF0Aew-mechanic:stage+AH0-.
+10005,+ACI-Removes +AFs-Light Screen+AF0Aew-move:light+AC0-screen+AH0-, +AFs-Reflect+AF0Aew-move:reflect+AH0-, and +AFs-Safeguard+AF0Aew-move:safeguard+AH0-.+ACI-,+ACI-Removes the effects of +AFsAXQB7-move:light+AC0-screen+AH0-, +AFsAXQB7-move:reflect+AH0-, and +AFsAXQB7-move:safeguard+AH0-.+ACI-
+10006,Changes the weather to Shadow Sky for five turns.,Changes the weather to Shadow Sky for five turns.  Pok+//0Aw//9AKk-mon other than +AFsAXQB7-type:shadow+AH0- Pok+//0Aw//9AKk-mon take 1/16 their max +AFs-HP+AF0Aew-mechanic:hp+AH0- at the end of every turn.  This move is typeless for the purposes of +AFsAXQB7-move:weather+AC0-ball+AH0-.
