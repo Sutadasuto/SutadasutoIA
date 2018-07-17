@@ -1,11 +1,13 @@
-Greninja (M) @ Darkinium Z  
-Ability: Protean  
-EVs: 252 SpA / 252 Spe  
+Politoed @ Damp Rock  
+Ability: Drizzle  
+Level: 50  
+EVs: 252 HP / 252 SpA / 4 SpD  
 Modest Nature  
-- Surf  
-- Dark Pulse  
+IVs: 0 Atk  
+- Scald  
 - Ice Beam  
-- Water Shuriken  
+- Focus Blast  
+- Hidden Power [Grass]
 
 Hawlucha (M) @ Misty Seed  
 Ability: Unburden  

@@ -168,29 +168,66 @@ def changeTo(pokemon=None):
 
 def getFoeName(team):
 
-    try:
-        foe = driver.find_element(By.CSS_SELECTOR, '.lstatbar > strong')
-        name = foe.text[0:-4].lower()
+    moreThanOneMega = ["charizard", "mewtwo"]
+
+    foe = driver.find_elements_by_css_selector('.lstatbar > strong')
+    if len(foe) == 1:
+        name = " ".join(foe[0].text.split(" ")[:-1]).lower()
         for poke in team:
             if len(poke.split(name)) == 2:
                 name = poke
                 break
+        icons = driver.find_elements_by_css_selector(".lstatbar>strong>img")
+        if len(icons) > 0:
+            if str(icons[-1].get_attribute("alt")) == "mega":
+                if name in moreThanOneMega:
+                    picons = driver.find_elements_by_css_selector("div.rightbar>div.trainer>div.teamicons>span.picon")
+                    for picon in picons:
+                        title = picon.get_attribute("title").lower()
+                        if "(active)" in title:
+                            if "mega-x" in title:
+                                name += "-mega-x"
+                                break
+                            elif "mega-y" in title:
+                                name += "-mega-y"
+                                break
+                else:
+                    name += "-mega"
         return name
-    except (NoSuchElementException, ValueError):
+    else:
         return 'Foe pokemon not found!'
 
 
 def myPokemonName(team):
 
-    try:
-        myPokemon = driver.find_element_by_css_selector('.whatdo > strong:nth-child(1)').text.lower()
+    moreThanOneMega = ["charizard", "mewtwo"]
+
+    myPokemon = driver.find_elements_by_css_selector('.rstatbar > strong')
+    if len(myPokemon) == 1:
+        name = " ".join(myPokemon[0].text.split(" ")[:-1]).lower()
         for poke in team:
-            if len(poke.split(myPokemon)) == 2:
-                myPokemon = poke
-                return myPokemon.lower()
-        return  myPokemon
-    except NoSuchElementException:
-        return 'My pokemon not found!'
+            if len(poke.split(name)) == 2:
+                name = poke
+                break
+        icons = driver.find_elements_by_css_selector(".rstatbar>strong>img")
+        if len(icons) > 0:
+            if str(icons[-1].get_attribute("alt")) == "mega":
+                if name in moreThanOneMega:
+                    picons = driver.find_elements_by_css_selector("div.leftbar>div.trainer>div.teamicons>span.picon")
+                    for picon in picons:
+                        title = picon.get_attribute("title").lower()
+                        if "(active)" in title:
+                            if "mega-x" in title:
+                                name += "-mega-x"
+                                break
+                            elif "mega-y" in title:
+                                name += "-mega-y"
+                                break
+                else:
+                    name += "-mega"
+        return name
+    else:
+        return 'Foe pokemon not found!'
 
 
 def myHP():
@@ -217,9 +254,13 @@ def foeHP():
 
 def analyzeCurrentStatus(myPokemon, foePokemon):
 
-    stats = ["atk", "def", "spa", "spd", "spe", "acc", "eva"]
+    stats = ["atk", "def", "spa", "spd", "spe", "accuracy", "evasion"]
     hs = ["psn", "par", "slp", "brn", "frz"]
-    vs = ["confused"]
+    vs = ["confused", "focus energy", "embargo", "taunt", "leech seed"]
+    terrains = ["electric terrain", "psychic terrain", "grassy terrain", "misty terrain"]
+    backgrounds = ["tailwind", "foe's tailwind", "trick room"]
+    weathers = ["rain", "sandstorm", "sun", "hail"]
+
 
     inGameMoves = driver.find_elements_by_name('chooseMove')
     for move in inGameMoves:
@@ -234,42 +275,48 @@ def analyzeCurrentStatus(myPokemon, foePokemon):
                     attack.pp = int(currentPP)
     myBoosts = [1] * 7
     foeBoosts = [1] * 7
-    myGoodStats = driver.find_elements_by_css_selector('div.statbar.rstatbar>div.hpbar>div.status>span.good')
-    foeGoodStats = driver.find_elements_by_css_selector('div.statbar.lstatbar>div.hpbar>div.status>span.good')
-    myBadStats = driver.find_elements_by_css_selector('div.statbar.rstatbar>div.hpbar>div.status>span.bad')
-    foeBadStats = driver.find_elements_by_css_selector('div.statbar.lstatbar>div.hpbar>div.status>span.bad')
+    myStats = driver.find_elements_by_css_selector('div.statbar.rstatbar>div.hpbar>div.status')
+    myStats = str(myStats[0].text).lower()
+    foeStats = driver.find_elements_by_css_selector('div.statbar.lstatbar>div.hpbar>div.status')
+    foeStats = str(foeStats[0].text).lower()
+
     myHardStatus = "healthy"
     for status in hs:
-        if len(driver.find_elements_by_css_selector('div.statbar.rstatbar>div.hpbar>div.status>span.' + status)) > 0:
+        if myStats.startswith(status):
             myHardStatus = status
             break
+
     foeHardStatus = "healthy"
     for status in hs:
-        if len(driver.find_elements_by_css_selector('div.statbar.lstatbar>div.hpbar>div.status>span.' + status)) > 0:
+        if foeStats.startswith(status):
             foeHardStatus = status
             break
 
-    for boost in myGoodStats:
-        value = str(boost.text).lower().split("\xd7 ")
-        myBoosts[stats.index(value[1])] = float(value[0])
     myVolatileStatus = []
-    for boost in myBadStats:
-        value = str(boost.text).lower().split("\xd7 ")
-        if len(value) == 2:
-            myBoosts[stats.index(value[1])] = float(value[0])
-        else:
-            myVolatileStatus.append(value[0])
+    for status in vs:
+        if status in myStats:
+            myVolatileStatus.append(status)
 
-    for boost in foeGoodStats:
-        value = str(boost.text).lower().split("\xd7 ")
-        foeBoosts[stats.index(value[1])] = float(value[0])
     foeVolatileStatus = []
-    for boost in foeBadStats:
-        value = str(boost.text).lower().split("\xd7 ")
-        if len(value) == 2:
-            foeBoosts[stats.index(value[1])] = float(value[0])
-        else:
-            foeVolatileStatus.append(value[0])
+    for status in vs:
+        if status in foeStats:
+            foeVolatileStatus.append(status)
+
+    list = myStats.split(" ")
+    for stat in stats:
+        if stat in list:
+            i = list.index(stat)
+            boost = list[i-1]
+            boost = boost.split("\xd7")[0]
+            myBoosts[stats.index((stat))] = float(boost)
+
+    list = foeStats.split(" ")
+    for stat in stats:
+        if stat in list:
+            i = list.index(stat)
+            boost = list[i - 1]
+            boost = boost.split("\xd7")[0]
+            foeBoosts[stats.index((stat))] = float(boost)
 
     myPokemon.boosts = myBoosts
     myPokemon.hard_status = myHardStatus
@@ -277,6 +324,25 @@ def analyzeCurrentStatus(myPokemon, foePokemon):
     foePokemon.boosts = foeBoosts
     foePokemon.hard_status = foeHardStatus
     foePokemon.volatile_status = foeVolatileStatus
+
+    battleField = driver.find_elements_by_css_selector("div.weather")
+    elements = battleField[-1].text.lower().split("\n")
+
+    for element in elements:
+
+        for terrain in terrains:
+            if element.startswith(terrain):
+                print("We are in " + terrain)
+                break
+
+        for background in backgrounds:
+            if element.startswith(background):
+                print("We are in " + background)
+
+        for weather in weathers:
+            if element.startswith(weather):
+                print("We are under " + weather)
+                break
 
 
 def battleActive():
@@ -299,7 +365,7 @@ def oneBattle(pokedex, attacks, jugadores):
 
     turn = 0
     expectedTurn = 1
-
+    print('Waiting for opponent...')
     while turn != expectedTurn:
         history = driver.find_elements_by_class_name('battle-history')
         try:
@@ -315,16 +381,22 @@ def oneBattle(pokedex, attacks, jugadores):
         foe = getFoeName(team2)
         poke.appendPokemon(foe, jugadores.list_rival, pokedex)
         rival = poke.foePokemon(foe, jugadores)
-        print('Foe: ' + rival.name)
         myPkm = myPokemonName(team1)
         active = poke.myPokemon(myPkm, jugadores)
-        print('My pokemon: ' + active.name)
         mHP = myHP()
-        print('My HP: ' + mHP)
         rival.hp = foeHP()
-        print('Foes HP: ' + str(rival.hp) + '%')
 
         analyzeCurrentStatus(active, rival)
+        print('\n\nFoe: ' + rival.name)
+        print('HP: ' + str(rival.hp) + '%')
+        print('Status: ' + rival.hard_status)
+        print('Conditions: ' + str(rival.volatile_status))
+        print('Boosts: ' + str(rival.boosts))
+        print('My pokemon: ' + active.name)
+        print('HP: ' + mHP)
+        print('Status: ' + active.hard_status)
+        print('Conditions: ' + str(active.volatile_status))
+        print('Boosts: ' + str(active.boosts))
 
         decision = battle.decideAction(active, rival, jugadores)
         if decision > 0:

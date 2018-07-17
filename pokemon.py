@@ -288,6 +288,8 @@ def get_this_pokemon(name, pokedex):
 
 
 def get_this_attack(name, db_attacks):
+    if len(name.split("hidden power")) > 1:
+        name = "hidden power"
     for j in range(len(db_attacks)):
         if db_attacks[j][1].replace("-", " ") == name:
             return get_attack(j, db_attacks)
